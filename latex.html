@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="samplestyle.css">
+    <title></title>
+</head>
+<body>
+    <p>
+    LaTeXで文書を作成する際，プリアンブルをいちいち打つのが面倒なので自分用にメモしておきます. <br><br>
+    また，学部生(以下)向けのLaTeX速習講座をおいておきます.
+    <br>
+    <br>
+    <h3>LaTeX超入門【学部生向け】</h3>
+    <ul>
+    <li><a href= "pdf/latex_introduction.pdf" target="_blank" rel="noopener noreferrer">LaTeX速習講座</a></li><br>
+    <li><a href= "pdf/beamer_introduction.pdf" target="_blank" rel="noopener noreferrer">Beamer速習講座</a></li>
+    </ul>
+    <br>
+    <h3>プリアンブルの参考例</h3>
+    <h4>LaTeX</h4>
+    <TT>
+    ¥documentclass[a4paper,onecolumn,dvipdfmx,titlepage]{jsarticle}
+%b4paperは用紙のサイズ, b4のところをa4に変更などすればサイズも変わる%<br>
+¥usepackage[top=15truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+%余白の設定, 単位はcm,mmでも可%<br><br>
+
+%様々なパッケージたち, パッケージ同士で衝突することもあるので注意が必要%<br>
+¥usepackage{okumacro}<br>
+¥usepackage{fancyhdr}<br>
+¥usepackage{lastpage}<br>
+¥usepackage{mathrsfs}<br>
+¥usepackage[dvipdfmx,hidelinks,ocgcolorlinks]{hyperref}<br>
+¥usepackage{pxjahyper}<br>
+¥usepackage{amsmath}<br>
+¥usepackage{amsfonts}<br>
+¥usepackage{ascmac}<br>
+¥usepackage{color}<br>
+¥usepackage{amsmath,amssymb}<br>
+¥usepackage[dvipdfmx]{graphicx}<br>
+¥usepackage[dvipdfmx]{color}<br>
+¥usepackage{graphics}<br>
+¥usepackage{tikz}<br>
+¥usepackage{tikz-cd}<br>
+¥usepackage{bm}<br>
+¥usepackage{bbm}<br>
+¥usepackage{picture}<br>
+¥usepackage{fancybox}<br>
+¥usepackage[bold]{otf}%deluxe<br>
+¥usepackage{stmaryrd}<br>
+¥usepackage{newtxtext}<br>
+¥usepackage{hhline}<br><br><br>
+
+
+%定理環境, 私も最近使い始めたのでちゃんとは理解していない%<br><br>
+
+¥usepackage{amsthm}<br>
+¥usepackage[xcolor]{mdframed}<br>
+¥usepackage{silence}¥WarningFilter{mdframed}{You got a bad break}<br>
+¥let¥oldtheorem=¥newtheorem<br>
+¥mdfdefinestyle{leftbar}{topline=false,rightline=false,bottomline=false,innertopmargin=0pt,linewidth=1pt,linecolor=black}<br>
+¥newcommand{¥NewTheorem}[2][linecolor=black]{¥surroundwithmdframed[style=leftbar,#1]{#2}¥oldtheorem{#2}}<br>
+¥newcommand{¥NewTheoremStar}[2][linecolor=black]{¥surroundwithmdframed[style=leftbar,#1]{#2}¥oldtheorem*{#2}}<br>
+¥makeatletter¥renewcommand{¥newtheorem}{¥@ifstar{¥NewTheoremStar}{¥NewTheorem}}¥makeatother<br>
+¥newtheoremstyle{mydefinition}{¥topsep}{¥topsep}{¥rmfamily}{0pt}{¥sffamily¥gtfamily¥bfseries}{.}{.5em}<br>
+{¥thmname{#1}¥thmnumber{ #2}¥thmnote{ (#3)}¥rmfamily}<br>
+¥theoremstyle{mydefinition}<br><br>
+
+¥newtheorem[linewidth=5pt]{dfn}{定義}[section]%linecolorは左線の色を変更できる! [leftline=false]%<br>
+¥newtheorem[linewidth=3pt]{thm}[dfn]{定理}<br>
+¥newtheorem[linewidth=5pt,topline=false,rightline=false,bottomline=false,backgroundcolor=green!25!white]{Thm}[dfn]{定理}<br>
+¥newtheorem[linewidth=5pt,topline=false,rightline=false,bottomline=false,backgroundcolor=yellow!70!white]{Dfn}[dfn]{定義}<br>
+¥newtheorem{prop}[dfn]{命題}<br>
+¥newtheorem{lem}[dfn]{補題}<br>
+¥newtheorem{cor}[dfn]{系}<br>
+¥newtheorem[linewidth=1pt,linecolor=magenta]{Cor}[dfn]{系}<br>
+¥newtheorem[bottomline=true]{ex}[dfn]{例}<br>
+¥newtheorem{axi}{公理}<br>
+¥newtheorem[leftline=false]{rem}[dfn]{注意}<br>
+¥newtheorem[leftline=false,backgroundcolor=red!20!white]{Rem}[dfn]{注意}<br>
+¥newtheorem[leftline=false,backgroundcolor=cyan!20!white]{fact}[dfn]{事実}<br><br>
+
+¥renewcommand{¥proofname}{証明}<br><br>
+
+¥makeatletter % use at mark<br>
+¥renewenvironment{proof}[1][¥proofname]{¥par<br>
+  ¥pushQED{¥qed}%<br>
+  ¥normalfont ¥topsep6¥p@¥@plus6¥p@¥relax<br>
+  ¥trivlist<br>
+  ¥item[¥hskip¥labelsep<br>
+        ¥itshape<br>
+    {¥bf¥underline{#1}}]¥ignorespaces<br>
+    % {¥bf¥underline{#1}¥@addpunct{.}}]¥ignorespaces % ピリオドあり<br>
+}{%<br>
+  ¥popQED¥endtrivlist¥@endpefalse<br>
+}<br>
+¥makeatother % end at mark<br><br><br><br>
+
+
+%番号付けの設定, arabicがアラビア数字(1,2,3,4,...), alphはアルファベット(a,b,c,d,...), romanはローマ数字(i,ii,iii,iv,...)%<br>
+¥renewcommand{¥labelenumi}{(¥arabic{enumi})} %一番外の番号(例えば, 大問みたいな感じ)%<br>
+¥renewcommand{¥labelenumii}{(¥alph{enumii})}%二番目の番号(例えば, 大問のつぎの数字)%<br>
+¥renewcommand{¥labelenumiii}{¥roman{enumiii}.}%三番目の番号(例えば, 小問みたいな感じ)%<br>
+¥renewcommand{¥thefootnote}{¥arabic{footnote})}%注釈の番号%<br><br><br>
+
+
+%いちいち, 打つのがめんどくさかったり, 覚えにくい既存のコマンドを, 自分用に設定%<br><br>
+
+%以下, ¥newcommand{¥*}{¥***}タイプ：本来, "¥***"と入力すべきところを"¥*"と省略%<br>
+¥newcommand{¥s}{¥mathfrak{S}}<br>
+¥newcommand{¥bmm}{¥mathbf}%数式環境の太字のローマン体%<br>
+¥newcommand{¥bbm}{¥mathbbm}%数式環境の白抜き文字のローマン体(ベクトルなど)%<br>
+¥newcommand{¥Ker}{¥mathrm{Ker}}<br>
+¥newcommand{¥Imm}{¥mathrm{Im}}<br>
+¥newcommand{¥loc}{¥mathrm{loc}}<br>
+¥newcommand{¥re}{¥mathrm{Re}}<br>
+¥newcommand{¥ve}{¥varepsilon}<br>
+¥newcommand{¥rank}{¥mathrm{rank}}<br>
+¥newcommand{¥vp}{¥varphi}<br>
+¥newcommand{¥diag}{¥mathrm{diag}}<br>
+¥newcommand{¥Def}{¥overset{¥text{def}}{¥Longleftrightarrow}}%定義%<br>
+¥newcommand{¥Id}{¥overset{¥text{id}}{=}}<br>
+¥newcommand{¥pd}{¥partial}<br>
+¥newcommand{¥grad}{¥mathrm{grad}¥,}<br>
+¥newcommand{¥Length}{¥mathrm{Length}}<br>
+¥newcommand{¥Area}{¥mathrm{Area}}<br>
+¥newcommand{¥Volume}{¥mathrm{Volume}}<br>
+¥newcommand{¥Vol}{¥mathrm{Vol}}<br>
+¥newcommand{¥near}{¥fallingdotseq}<br>
+¥newcommand{¥dis}{¥displaystyle}<br>
+¥newcommand{¥leqs}{¥leqslant}<br>
+¥newcommand{¥geqs}{¥geqslant}<br>
+¥newcommand{¥Cov}{¥mathrm{Cov}}<br>
+¥newcommand{¥E}{¥mathrm{E}}<br>
+¥newcommand{¥Var}{¥mathrm{Var}}<br>
+¥newcommand{¥st}{¥hspace{1.5zw}¥text{s.t.}¥hspace{1.5zw}}<br>
+¥newcommand{¥Map}{¥mathsf{Map}}%写像全体%<br>
+¥newcommand{¥Mat}{¥mathsf{Mat}}<br>
+¥newcommand{¥cent}{¥mathrm{cent}}<br>
+¥newcommand{¥so}{{¥large¥textcircled{¥small$¥because$}}}<br>
+¥newcommand{¥N}{¥mathbf{N}}%自然数全体%<br>
+¥newcommand{¥Z}{¥mathbf{Z}}%整数全体%<br>
+¥newcommand{¥Q}{¥mathbf{Q}}%有理数全体%<br>
+¥newcommand{¥R}{¥mathbf{R}}%実数全体%<br>
+¥newcommand{¥C}{¥mathbf{C}}%複素数全体%<br>
+¥newcommand{¥K}{¥mathbf{K}}<br>
+¥newcommand{¥beki}{¥mathfrak{P}}%冪集合%<br>
+¥newcommand{¥id}{¥mathrm{id}}%恒等写像%<br>
+¥newcommand{¥Ad}{¥mathrm{Ad}}<br>
+¥newcommand{¥Aut}{¥mathrm{Aut}}%自己同型群%<br>
+¥newcommand{¥GL}{¥mathsf{GL}}%一般線型群%<br>
+¥newcommand{¥SL}{¥mathsf{SL}}%特殊線型群%<br>
+¥newcommand{¥sgn}{¥mathrm{sgn}}<br>
+¥newcommand{¥Inn}{¥mathrm{Inn}}<br>
+¥newcommand{¥mult}{¥mathrm{mult}}<br>
+¥newcommand{¥End}{¥mathrm{End}}<br>
+¥newcommand{¥Hom}{¥mathrm{Hom}}<br>
+¥newcommand{¥tr}{¥mathrm{tr}}%トレース；行列の対角成分の和%<br>
+¥newcommand{¥Irr}{¥mathrm{Irr}}<br>
+¥newcommand{¥cls}{¥mathrm{cls}}<br>
+¥newcommand{¥en}{Y¥llap=}%円マーク(恐らく普通の人は使うことはない)%<br>
+¥newcommand{¥Frac}{¥mathrm{Frac}}<br><br><br><br>
+
+
+¥newcommand{¥aida}[1]{¥textcolor{white}{#1}}<br>
+¥newcommand{¥abs}[1]{¥left|#1¥right|}<br>
+¥newcommand{¥norm}[1]{¥left¥|#1¥right¥|}<br>
+¥newcommand{¥floor}[1]{¥left¥lfloor#1¥right¥rfloor}<br>
+¥newcommand{¥cp}[3]{¥,{}_{#2}¥!¥left¥langle#1¥right¥rangle_{#3}}<br>
+¥newcommand{¥Set}[1]{¥left¥{#1¥right¥}}<br>
+¥newcommand{¥kakko}[1]{¥left(#1¥right)}<br>
+¥newcommand{¥conti}{¥mathsf{C}}<br>
+¥newcommand{¥LL}{¥mathscr{B}}<br>
+¥newcommand{¥KK}{¥mathscr{K}}<br>
+¥DeclareMathOperator*{¥slim}{s-lim}<br>
+¥DeclareMathOperator*{¥wlim}{w-lim}<br>
+¥newcommand{¥BB}{¥mathscr{B}}<br>
+¥newcommand{¥range}{¥mathcal{R}}<br>
+¥newcommand{¥Bn}{¥mathsf{B}_n}<br>
+¥newcommand{¥Ichi}{¥mathbf{1}}<br>
+¥newcommand{¥Ref}[1]{¥textsf{¥ref{#1}}}<br>
+¥newcommand{¥prf}[2]{¥hspace{-1zw}¥textbf{{#1}¥Ref{#2}の証明.}}<br>
+¥newcommand{¥m}{¥mathrm{m}}<br>
+¥newcommand{¥M}{¥mathfrak{M}}<br>
+¥newcommand{¥Lu}{¥mathscr{L}}<br>
+¥newcommand{¥Lb}{¥mathcal{L}}<br>
+¥newcommand{¥MM}{¥mathscr{M}}<br>
+¥newcommand{¥Cc}{C_{¥mathrm{c}}}<br>
+¥newcommand{¥braket}[1]{¥left[¥,#1¥,¥right]}<br><br>
+
+¥DeclareMathOperator*{¥supp}{Supp}<br>
+¥DeclareMathOperator*{¥esssup}{ess¥,sup}<br><br>
+
+%以下, ¥newcommand{¥**}[n]{¥***{#i}¥*{#j}.../****{#k}} (n,i,j,kは何かしらの数値;i,j,kはn以下の数値で相異なる)タイプ：nは引数, "¥**{#1}{#2}...{#n}"と入力すれば, "¥***{#i}¥*{#j}.../****{#k}"が実行される%<br>
+¥newcommand{¥lfrac}[2]{¥left(¥frac{#1}{#2}¥right)}<br><br>
+
+%既存の環境を自分でオリジナルな環境に設定, 最近使い始めたのでちゃんとは理解していない%<br>
+¥newenvironment{smallpmatrix}{¥left(¥begin{smallmatrix}}{¥end{smallmatrix}¥right)}<br>
+¥newenvironment{smallvmatrix}{¥left|¥begin{smallmatrix}}{¥end{smallmatrix}¥right|}<br>
+¥newenvironment{smallbmatrix}{¥left[¥begin{smallmatrix}}{¥end{smallmatrix}¥right]}<br><br>
+
+¥numberwithin{equation}{section}<br><br>
+
+¥hypersetup{ pdftitle={卒研},pdfauthor={NAKAHASHI,Kentaro}}<br>
+%¥AtBeginDvi{¥special{pdf:encrypt ownerpw(***) userpw(***)length 128 perm 0}}%2250<br><br>
+
+¥title{}<br>
+¥author{}<br>
+¥date{¥today}<br><br>
+
+¥hypersetup{<br>
+       colorlinks=true,<br>
+       citecolor=blue,<br>
+       linkcolor=blue,<br>
+       urlcolor=red!70!yellow%border<br>
+}<br><br>
+
+¥setcounter{tocdepth}{2}<br><br>
+
+¥usepackage{makeidx}<br>
+¥makeindex<br><br>
+¥begin{document}<br>
+¥maketitle<br>
+%¥tableofcontents<br><br>
+
+本文<br><br>
+
+¥end{document}<br><br><br>
+
+    </TT>
+    
+    <hr width="100%" color="black">
+    <br>
+    <h4>Beamer</h4>
+    <TT>
+    ¥documentclass[dvipdfmx,10pt,notheorems]{beamer}<br><br>
+
+¥usepackage{bxdpx-beamer}<br>
+¥usepackage{pxjahyper}<br>
+¥usepackage{minijs}<br>
+¥usepackage{mathrsfs}<br>
+¥usepackage{okumacro}<br>
+¥renewcommand{¥thefootnote}{$^*$¥arabic{footnote}}<br>
+¥usepackage{amsmath,amsfonts,amsthm,amssymb}<br>
+¥usepackage{color}<br>
+¥usepackage{graphics}<br>
+¥usepackage{tikz}<br>
+¥usepackage{bm,bbm}<br>
+¥usepackage{picture}<br>
+¥usepackage{fancybox}<br>
+¥usepackage[bold]{otf}<br><br><br>
+
+
+
+¥newcommand{¥bs}{¥textbackslash}<br>
+¥newcommand{¥txhat}{¥textasciicircum}<br><br>
+
+
+¥renewcommand{¥kanjifamilydefault}{¥gtdefault}<br>
+¥mathversion{bold}<br>
+¥theoremstyle{definition}<br><br>
+
+¥setbeamertemplate{theorems}[numbered]<br>
+¥newtheorem{rem}{¥textbf{注意}}<br>
+¥newtheorem{ex}{¥textbf{例}}<br>
+¥newtheorem{dfn}{¥textbf{定義}}<br>
+¥newtheorem{thm}[dfn]{¥textbf{定理}}<br>
+¥newtheorem{pro}[dfn]{¥textbf{命題}}<br>
+¥newtheorem{lem}[dfn]{¥textbf{補題}}<br>
+¥newtheorem{cor}[dfn]{¥textbf{系}}<br>
+¥newtheorem{fact}[dfn]{¥textbf{事実}}<br>
+¥newtheorem{axi}{¥textbf{公理}}<br><br><br>
+
+
+
+¥renewcommand{¥thepart}{¥arabic{part}}<br><br><br>
+
+¥setbeamercolor{block body}{fg=black, bg=blue!10!white}<br>
+¥setbeamercolor{block title}{fg=black, bg=blue!40!white}<br>
+¥setbeamercolor{title}{fg=black, bg=yellow!70!red}<br>
+¥setbeamercolor{Example}{fg=black,bg=green!40!white}<br>
+¥setbeamercolor{RedBox}{fg=black,bg=red!20!white}<br>
+¥setbeamercolor{KentaroBox}{fg=black,bg=orange}<br>
+¥setbeamertemplate{navigation symbols}{}<br>
+%¥usefonttheme{professionalfonts}<br>
+%¥usepackage{euler}<br>
+¥usetheme{AnnArbor}%Luebeck,Berkeley,AnnArbor,Berlin,Warsaw,Szeged,Boadilla,Madrid<br>
+¥usecolortheme{orchid}%crane,orchid,wolverine<br>
+¥useinnertheme{circles}<br>
+¥setbeamercovered{transparent}<br><br>
+
+¥setbeamercolor{block title alerted}{bg=red!90!white, fg=white}<br>
+¥setbeamercolor{block body alerted}{bg=red!10!white, fg=black}<br><br>
+
+¥title{¥bf }<br>
+¥subtitle{}<br>
+¥author{}<br>
+¥institute{}<br>
+¥date{¥today}<br><br>
+
+%¥setbeamertemplate{footline}[frame number]<br>
+%¥setbeamertemplate{headline}[text line]<br><br>
+
+¥hypersetup{ pdftitle={BeamerSample},pdfauthor={NAKAHASHI,Kentaro}}<br><br>
+
+    </TT>
+    </p>
+    </body>
+</html>
