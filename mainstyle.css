@@ -1,0 +1,260 @@
+/*h1 {
+	padding: .10em 0 .5em .5em;
+	border-left: 6px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}*/
+
+/*h1 {
+  position: relative;
+  padding: 0.25em 0;
+}
+h1:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+  background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}*/
+
+/*h1 {
+  position: relative;
+  padding: 0.2em 0.5em;
+  background: -webkit-linear-gradient(to right, rgb(255, 124, 111), #ffc994);
+  background: linear-gradient(to right, rgb(255, 124, 111), #ffc994);
+  color: white;
+  font-weight: lighter;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
+  font-weight:800;
+}*/
+
+/*h1 {
+  position: relative;
+  padding: 0.1em 0.5em;
+  background: -webkit-linear-gradient(to right, rgb(255, 186, 115), transparent);
+  background: linear-gradient(to right, rgb(255, 186, 115), transparent);
+  color: #545454;
+  font-weight:800;
+}*/
+
+h1 {
+  position: relative;
+  padding: 0 65px;
+  text-align: center;
+}
+
+h1:before {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background: #000;
+}
+
+h1 span {
+  position: relative;
+  padding: 0 1em;
+  background: #fff;
+}
+
+
+h2 {
+	padding: .10em 0 .5em .5em;
+	border-left: 6px solid #FF9933;
+	border-bottom: 1px solid #FF9933;
+}
+
+/*h2 {
+  position: relative;
+  padding-left: 25px;
+}
+
+h2:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left:0pt;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px orange;
+}
+h2:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 3px;
+  width: 99.6%;
+  border-bottom: solid 3px orange;
+}*/
+
+h3 {
+  border-bottom: solid 3px skyblue;
+  position: relative;
+}
+
+h3:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #ffc778;
+  bottom: -3px;
+  width: 30%;
+}
+
+
+
+p {
+   max-width: 800px;
+   min-width: 500px;
+   width: 85%;
+   margin-left: 20px;
+}
+
+
+body{
+        font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
+	background-color: white;
+	margin: 0;
+	border-top: 0;
+	border-right: solid 60px white;
+	border-left: solid 60px white;
+	border-bottom: 0;
+}
+/*#fff8dc*/
+/*ivory fffff0 */
+/* 
+body{background-image: url("./img/wall1.png");}-->
+*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+/* 画像を左から右に表示
+.img-wrap:before {
+  animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: #fff;
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@keyframes img-wrap {
+  100% {
+    transform: translateX(100%);
+  }
+}
+*/
+
+/*画像を真ん中から表示*/
+.img-wrap {
+  animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes img-wrap {
+  0% {
+    clip-path: circle(0 at 50% 50%);
+    -webkit-clip-path: circle(0 at 50% 50%);
+  }
+  
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    -webkit-clip-path: circle(100% at 50% 50%);
+  }
+}
+
+
+ol li {
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+figure{
+	margin: 0;
+	padding: 0;
+	}
+
+/*****NAV*****/
+nav{
+	width: 100%;	/*横幅の指定*/
+	border-top: 1px solid orange;	/*上部の線の色を指定*/
+	border-bottom: 1px solid orange;	/*下部の線の色を指定*/
+	margin-bottom: 5px;	/**/
+	overflow: hidden;	/*おまじない*/
+}
+nav ul{
+	width: 90%;	/*横幅の指定*/
+	margin: auto;	/*中央に配置する*/
+	list-style: none; /*リストのスタイルを削除*/
+}
+nav li{
+	width: calc(100% / 6);	/*横幅の指定*/
+	border-left: 1px solid orange;	/*線を描く*/
+	box-sizing: border-box; /*線の幅をliの横幅に含める*/
+	text-align: center;	/*文字を中央に*/
+	float: left;	/*左から並べる*/
+}
+nav li:last-child{
+	border-right: 1px solid orange;	/*li要素の最後の物は右側に線を描く*/
+}
+nav a{
+	display: block;	/*1つのli全体にリンクを有効にする*/
+	text-decoration: none;	/*ブラウザ標準のリンク装飾をオフに*/
+	color:#313131;	/*文字色の変更*/
+	font-size: 110%;	/*フォントサイズの指定*/
+	letter-spacing: 5px;	/*文字と文字の間隔をあける*/
+	font-weight: 400;	/*文字の太さを調整*/
+	line-height: 45px;	/*行間の指定（ナビボタンの高さ指定）*/
+}
+nav a:hover{
+	background-color: orange;	/*背景色の指定*/
+	color: #fff;	/*文字色の変更*/
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;	/*ホバー時の動きをなめらかにする*/
+}
+	
+
+
+.table1 {
+  border-collapse: collapse;
+  width: 1000px;
+  border: 3px solid gray;
+  margin: 20px 30px;
+}
+.table1 th, .table1 td {
+  border: 2px solid gray;
+}
+
+
+.inline-block_test {
+    display: inline-block;      /* インラインブロック要素にする */
+    background-color:  #ccc;    /* 背景色指定 */
+    padding: 10px;              /* 余白指定 */
+    width: 200px;
+    margin: 10px
+}
+
+footer{
+    font-size: 80%; /*フォントサイズの指定*/
+    width: 100%;    /*横幅の指定*/
+    text-align: left; /*文字の中央寄せ*/
+    padding-top: 10px;  /*文字上部の余白指定*/
+    padding-bottom: 10px;   /*文字下部の余白指定*/
+    background-color: #313131;  /*背景色の指定*/
+    color: #fff;
+}
