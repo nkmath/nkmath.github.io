@@ -3,15 +3,15 @@ font-weight:bold;
 }*/
 
 a:link {
-color:#FF9900;
-}
-
-a:visited {
 color: #0FF;
 }
 
+a:visited {
+color: #FF9900;
+}
+
 a:hover {
-color:red;
+color:#FFE4E1;
 }
 
 /*a:active {
