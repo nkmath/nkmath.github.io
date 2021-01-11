@@ -6,31 +6,15 @@
     <title></title>
 </head>
 <body>
-    <h1><span>中橋のホームページ</span></h1>
-    <h2>自己紹介.</h2>
-    <ul>
-    <li>名前：中橋 健太郎  (なかはし けんたろう)</li>
-  <li>出身地：香川県三豊市，観光地・父母ヶ浜のある町に生まれる.</li>
-  <li>誕生日：1月19日.</li>
-  <li>出身高校：香川県立高瀬高等学校.</li>
-  <li>2020年度所属ゼミ：瓜屋ゼミ，指導教員・瓜屋航太先生 (<a href= "https://researchmap.jp/k-uriya" target="_blank" rel="noopener noreferrer">researchmap</a>).</li>
-    </ul>
-    <h2>卒業研究について.</h2>
-    <ul>
-    <li>卒業論文「双対作用素のコンパクト性」(<a href= "https://drive.google.com/file/d/18-a51m4L3t7v9Uzb4P3DfyykuX_3FLA7/view" target="_blank" rel="noopener noreferrer">日本語</a> ，<a href= "https://drive.google.com/file/d/1caQIxGuKZSZTE_7vMd4kEYUsm_HlS6gO/view" target="_blank" rel="noopener noreferrer">English</a>)<br><p>卒業研究は，函数解析について勉強しました.<br>函数解析は別名，位相解析だったり，無限次元線型代数学，位相線型空間論などと呼ばれます.<br><br>卒業研究の詳しい内容については，<a href= "https://sites.google.com/view/graduate2020nk" target="_blank" rel="noopener noreferrer"><strong>こちら</strong></a> を参照ください ( 随時更新予定 ).<br>PDFにパスワードがかかっている場合は，"ousxmath2020" と入力してください.</p></li>
-    </ul>
-    <h2>純粋数学の分野に対する勝手な偏見.</h2>
-    <p>
-    <ul>
-    <li>代数学は「等式の学問」と言われるだけあって，"綺麗"なイメージ.</li>
-    <li>幾何学は"美しい"イメージ.</li>
-    <li>解析学は「不等式の学問」と呼ばれているため，なんでも"近似"するイメージ.</li>
-    <br> 実は，個人的に好きな分野は代数学である. 代数的な証明は本当にきれいで好きです ( 理解しているとは言ってない ).<br><br>
-    </ul>
-    </p>
-    </body>
-<!-- footer -->
-  <footer>
-  	<p>最終更新日：2020年12月23日</p>
-  </footer>
+    <form name="myform" onsubmit="return checkText()">
+ <input type="password" name="PW">
+ <input type="submit" value="ログイン" />
+</form>
+<script>
+ function checkText() {
+    //*****に、サイトのページ名を入れてください
+    document.myform.action = "https://nkmath.github.io/"+ document.myform.password.value;;
+ }
+</script>
+</body>
 </html>
