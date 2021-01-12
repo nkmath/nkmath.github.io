@@ -279,3 +279,46 @@ footer{
     background-color: #313131;  /*背景色の指定*/
     color: #fff;
 }
+
+.textleft {
+   text-align: left;  /* 文章を左寄せする(※) */
+   float: left;     /* 左端に寄せて、後続を右側へ回り込ませる */
+}
+.textright {
+   text-align: right; /* 文章を右寄せする */
+}
+
+/*スマホ用*/
+@media screen and (max-width: 480px) {
+    *{
+        float: none;
+	position: static;
+    }
+    img {
+	max-width: 100%;
+	height: auto;
+    }
+    p {
+        min-width: 100px;
+    }
+    body {
+        border-right: solid 20px white;
+        border-left: solid 20px white;
+        font-size: 80%;
+    }
+    footer {
+        font-size: 64%;
+    }
+    h2 {
+        font-size: 130%;
+    }
+}
+
+
+
+
+
+
+
+
+
