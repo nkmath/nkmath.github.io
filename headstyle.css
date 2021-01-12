@@ -106,7 +106,7 @@ h3:after {
 
 p {
    max-width: 800px;
-   min-width: 500px;
+   /*min-width: 500px;*/
    width: 85%;
    margin-left: 6px;
 }
@@ -256,3 +256,42 @@ footer{
     background-color: #313131;  /*背景色の指定*/
     color: #fff;
 }
+
+
+/*スマホ用*/
+@media screen and (max-width: 480px) {
+    *{
+        float: none;
+	position: static;
+    }
+    img {
+	max-width: 100%;
+	height: auto;
+    }
+    /*p {
+        min-width: 100px;
+    }*/
+    body {
+        width: auto;
+        border-right: solid 20px white;
+        border-left: solid 20px white;
+        font-size: 50%;
+    }
+    footer {
+        font-size: 64%;
+    }
+    h2 {
+        font-size: 130%;
+    }
+    nav {
+        max-width: initial;
+    }
+    nav a{
+	max-width: initial;
+	letter-spacing: 1px; /*文字と文字の間隔をあける*/
+    }
+}
+
+
+
+
