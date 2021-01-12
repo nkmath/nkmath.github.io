@@ -1,6 +1,6 @@
 body{
   height: calc(100vh - 8em);
-  padding: 4em;
+  /*padding: 4em;*/
   color: rgba(255,255,255,.75); 
   /*background-color: rgb(25,25,25);  */
   background-color: white;
@@ -40,3 +40,23 @@ body{
   from{border-right-color: #000;}
   to{border-right-color: transparent;}
 }
+
+
+/*スマホ用*/
+@media screen and (max-width: 480px) {
+    *{
+        float: none;
+	position: static;
+    }
+    body {
+        border-right: solid 20px white;
+        border-left: solid 20px white;
+        letter-spacing: 2px; /*文字と文字の間隔をあける*/
+    }
+    .line-1{
+    font-size: 110%;
+    }
+}
+
+
+
