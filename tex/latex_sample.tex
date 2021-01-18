@@ -1,0 +1,212 @@
+\documentclass[a4paper,onecolumn,dvipdfmx]{jsarticle}%titlepage,draft
+\usepackage[top=15truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+
+
+\usepackage{okumacro}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{mathrsfs}
+\usepackage[dvipdfmx,hidelinks,ocgcolorlinks]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{ascmac}
+\usepackage{color}
+\usepackage{amsmath,amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{picture}
+\usepackage{fancybox}
+\usepackage[bold]{otf}%deluxe
+\usepackage{stmaryrd}
+\usepackage{newtxtext}
+\usepackage{hhline}
+\usepackage{showkeys}%label名が見える
+
+
+\usepackage{amsthm}
+\usepackage[xcolor]{mdframed}
+\usepackage{silence}\WarningFilter{mdframed}{You got a bad break}
+\let\oldtheorem=\newtheorem
+\mdfdefinestyle{leftbar}{topline=false,rightline=false,bottomline=false,innertopmargin=0pt,linewidth=1pt,linecolor=black} \newcommand{\NewTheorem}[2][linecolor=black]{\surroundwithmdframed[style=leftbar,#1]{#2}\oldtheorem{#2}}
+\newcommand{\NewTheoremStar}[2][linecolor=black]{\surroundwithmdframed[style=leftbar,#1]{#2}\oldtheorem*{#2}}
+\makeatletter\renewcommand{\newtheorem}{\@ifstar{\NewTheoremStar}{\NewTheorem}}\makeatother
+\newtheoremstyle{mydefinition}{\topsep}{\topsep}{\rmfamily}{0pt}{\sffamily\gtfamily\bfseries}{.}{.5em}
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}\rmfamily}
+\theoremstyle{mydefinition}
+
+
+\newtheorem[linewidth=5pt]{dfn}{定義}[section]
+\newtheorem[linewidth=3pt]{thm}[dfn]{定理}
+\newtheorem[linewidth=5pt,topline=false,rightline=false,bottomline=false,backgroundcolor=green!25!white]{Thm}[dfn]{定理}
+\newtheorem[linewidth=5pt,topline=false,rightline=false,bottomline=false,backgroundcolor=yellow!70!white]{Dfn}[dfn]{定義}
+\newtheorem{prop}[dfn]{命題}
+\newtheorem{lem}[dfn]{補題}
+\newtheorem{cor}[dfn]{系}
+\newtheorem[linewidth=1pt,linecolor=magenta]{Cor}[dfn]{系}
+\newtheorem[bottomline=true]{ex}[dfn]{例}
+\newtheorem{axi}{公理}
+\newtheorem[leftline=false]{rem}[dfn]{注意}
+\newtheorem[leftline=false,backgroundcolor=red!20!white]{Rem}[dfn]{注意}
+\newtheorem[leftline=false,backgroundcolor=cyan!20!white]{fact}[dfn]{事実}
+
+
+%番号付けの設定, arabicがアラビア数字(1,2,3,4,...), alphはアルファベット(a,b,c,d,...), romanはローマ数字(i,ii,iii,iv,...)%
+\renewcommand{\labelenumi}{(\arabic{enumi})} %一番外の番号(例えば, 大問みたいな感じ)%
+\renewcommand{\labelenumii}{(\alph{enumii})}%二番目の番号(例えば, 大問のつぎの数字)%
+\renewcommand{\labelenumiii}{\roman{enumiii}.}%三番目の番号(例えば, 小問みたいな感じ)%
+\renewcommand{\thefootnote}{\arabic{footnote})}%注釈の番号%
+
+
+%いちいち, 打つのがめんどくさかったり, 覚えにくい既存のコマンドを, 自分用に設定%
+
+%以下, \newcommand{\*}{\***}タイプ：本来, "\***"と入力すべきところを"\*"と省略%
+\newcommand{\s}{\mathfrak{S}}
+\newcommand{\bmm}{\mathbf}%数式環境の太字のローマン体%
+\newcommand{\bbm}{\mathbbm}%数式環境の白抜き文字のローマン体(ベクトルなど)%
+\newcommand{\Ker}{\mathrm{Ker}}
+\newcommand{\Imm}{\mathrm{Im}}
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\re}{\mathrm{Re}}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\vp}{\varphi}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\Def}{\overset{\text{def}}{\Longleftrightarrow}}%定義%
+\newcommand{\Id}{\overset{\text{id}}{=}}
+\newcommand{\pd}{\partial}
+\newcommand{\Length}{\mathrm{Length}}
+\newcommand{\Area}{\mathrm{Area}}
+\newcommand{\Volume}{\mathrm{Volume}}
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\near}{\fallingdotseq}
+\newcommand{\dis}{\displaystyle}
+\newcommand{\leqs}{\leqslant}
+\newcommand{\geqs}{\geqslant}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Map}{\mathsf{Map}}%写像全体%
+\newcommand{\Mat}{\mathsf{Mat}}
+\newcommand{\cent}{\mathrm{cent}}
+\newcommand{\so}{{\large\textcircled{\small$\because$}}}
+\newcommand{\N}{\mathbf{N}}%自然数全体%
+\newcommand{\Z}{\mathbf{Z}}%整数全体%
+\newcommand{\Q}{\mathbf{Q}}%有理数全体%
+\newcommand{\R}{\mathbf{R}}%実数全体%
+\newcommand{\C}{\mathbf{C}}%複素数全体%
+\newcommand{\K}{\mathbf{K}}
+\newcommand{\beki}{\mathfrak{P}}%冪集合%
+\newcommand{\id}{\mathrm{id}}%恒等写像%
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\Aut}{\mathrm{Aut}}%自己同型群%
+\newcommand{\GL}{\mathsf{GL}}%一般線型群%
+\newcommand{\SL}{\mathsf{SL}}%特殊線型群%
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Inn}{\mathrm{Inn}}
+\newcommand{\mult}{\mathrm{mult}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\tr}{\mathrm{tr}}%トレース；行列の対角成分の和%
+\newcommand{\Irr}{\mathrm{Irr}}
+\newcommand{\cls}{\mathrm{cls}}
+\newcommand{\en}{Y\llap=}%円マーク(恐らく普通の人は使うことはない)%
+\newcommand{\Frac}{\mathrm{Frac}}
+
+
+\newcommand{\aida}[1]{\textcolor{white}{#1}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\cp}[3]{\,{}_{#2}\!\left\langle#1\right\rangle_{#3}}
+\newcommand{\Set}[1]{\left\{#1\right\}}
+\newcommand{\kakko}[1]{\left(#1\right)}
+\newcommand{\conti}{\mathsf{C}}
+\newcommand{\KK}{\mathscr{K}}
+\newcommand{\BB}{\mathscr{B}}
+\newcommand{\range}{\mathcal{R}}
+\newcommand{\Bn}{\mathsf{B}_n}
+\newcommand{\Ichi}{\mathbf{1}}
+\newcommand{\Ref}[1]{\textsf{\ref{#1}}}
+\newcommand{\prf}[2]{\noindent\textbf{{#1}\Ref{#2}の証明.}}
+\newcommand{\m}{\mathrm{m}}
+\newcommand{\M}{\mathfrak{M}}
+\newcommand{\Lu}{\mathscr{L}}
+\newcommand{\Lb}{\mathcal{L}}
+\newcommand{\MM}{\mathscr{M}}
+\newcommand{\Cc}{C_{\mathrm{c}}}
+\newcommand{\braket}[1]{\left[\,#1\,\right]}
+
+
+\DeclareMathOperator*{\supp}{Supp}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+\DeclareMathOperator*{\slim}{s-lim}
+\DeclareMathOperator*{\wlim}{w-lim}
+\DeclareMathOperator*{\grad}{grad}
+
+
+%以下, \newcommand{\**}[n]{\***{#i}\*{#j}.../****{#k}} (n,i,j,kは何かしらの数値;i,j,kはn以下の数値で相異なる)タイプ：nは引数, "\**{#1}{#2}...{#n}"と入力すれば, "\***{#i}\*{#j}.../****{#k}"が実行される%
+\newcommand{\lfrac}[2]{\left(\frac{#1}{#2}\right)}
+
+
+%既存の環境を自分でオリジナルな環境に設定, 最近使い始めたのでちゃんとは理解していない%
+\newenvironment{smallpmatrix}{\left(\begin{smallmatrix}}{\end{smallmatrix}\right)}
+\newenvironment{smallvmatrix}{\left|\begin{smallmatrix}}{\end{smallmatrix}\right|}
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+
+
+\numberwithin{equation}{section}
+
+
+\hypersetup{ pdftitle={},pdfauthor={NAKAHASHI,Kentaro}}
+%\AtBeginDvi{\special{pdf:encrypt ownerpw(***) userpw(***)length 128 perm 0}}%2250
+
+
+\title{タイトル}
+\author{名前}
+\date{日付}
+
+
+\hypersetup{
+colorlinks=true,
+citecolor=blue,
+linkcolor=blue,
+urlcolor=red!70!yellow%border
+}
+
+
+\setcounter{tocdepth}{2}
+
+
+\usepackage{makeidx}
+\makeindex
+
+
+\begin{document}
+    \maketitle
+    %\tableofcontents
+    
+     \begin{abstract}
+       概要を述べる.
+     \end{abstract}
+     
+     \section{実数の連続性}
+     実数の連続性について述べる.
+     \subsection{数列の収束}
+     実数列$\Set{a_n}_{n=1}^\infty$が$\alpha\in\R$に収束するとは, どんな$\ve>0$に対しても, ある番号$N\in\N$が存在し, すべての自然数$n\geqs N$に対して, \begin{equation}\label{seqconv}
+     \abs{a_n-\alpha}<\ve
+     \end{equation}が成り立つことである.
+     
+     
+     
+     
+     
+     
+     
+     
+\end{document}
