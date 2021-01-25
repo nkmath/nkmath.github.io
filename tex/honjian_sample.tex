@@ -1,0 +1,162 @@
+\documentclass[a4paper,onecolumn,dvipdfmx]{jsarticle}
+%b4paperは用紙のサイズ，b4のところをa4に変更などすればサイズも変わる，landscapleは用紙横向き%
+\usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+%余白の設定，単位はcm,mmでも可%
+
+
+%様々なパッケージたち，パッケージ同士で衝突することもあるので注意が必要%
+\usepackage{okumacro}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{mathrsfs}
+\usepackage[dvipdfmx,hidelinks]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{ascmac}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{picture}
+\usepackage{fancybox}
+\usepackage[bold]{otf}
+\usepackage{stmaryrd}
+\usepackage{hhline}
+\usepackage{longtable}
+
+
+%定理環境%
+\usepackage{amsthm}
+
+\newtheorem{dfn}{定義}
+\newtheorem{thm}[dfn]{定理}
+\newtheorem{prop}[dfn]{命題}
+\newtheorem{lem}[dfn]{補題}
+\newtheorem{cor}[dfn]{系}
+\newtheorem{fact}{事実}
+\newtheorem{exam}{例題}
+\newtheorem{axi}{公理}
+\newtheorem{prob}{問題}
+
+
+%番号付けの設定，arabicがアラビア数字(1,2,3,4,...)，alphはアルファベット(a,b,c,d,...)，romanはローマ数字(i,ii,iii,iv,...)%
+\renewcommand{\labelenumi}{\arabic{enumi}.} %一番外の番号(例えば，大問みたいな感じ)%
+\renewcommand{\labelenumii}{(\alph{enumii})}%二番目の番号(例えば，大問のつぎの数字)%
+\renewcommand{\labelenumiii}{\roman{enumiii}.}%三番目の番号(例えば，小問みたいな感じ)%
+\renewcommand{\thefootnote}{\arabic{footnote})}%注釈の番号%
+
+
+%いちいち，打つのがめんどくさかったり，覚えにくい既存のコマンドを，自分用に設定%
+%以下，\newcommand{\*}{\***}タイプ：本来，"\***"と入力すべきところを"\*"と省略%
+\newcommand{\s}{\mathfrak{S}}
+\newcommand{\bs}{\textbackslash}
+\newcommand{\txhat}{\textasciicircum}
+\newcommand{\aida}[1]{\textcolor{white}{#1}}
+
+
+%以下，\newcommand{\**}[n]{\***{#i}\*{#j}.../****{#k}} (n,i,j,kは何かしらの数値;i,j,kはn以下の数値で相異なる)タイプ：nは引数，"\**{#1}{#2}...{#n}"と入力すれば，"\***{#i}\*{#j}.../****{#k}"が実行される%
+\newcommand{\lfrac}[2]{\left(\frac{#1}{#2}\right)}
+
+%既存の環境を自分でオリジナルな環境に設定，最近使い始めたのでちゃんとは理解していない%
+\newenvironment{smallpmatrix}{\left(\begin{smallmatrix}}{\end{smallmatrix}\right)}
+\newenvironment{smallvmatrix}{\left|\begin{smallmatrix}}{\end{smallmatrix}\right|}
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+
+\renewcommand{\footrulewidth}{0.4pt}%下の線%
+\setlength{\columnseprule}{0.4pt}%真ん中の線%
+\pagestyle{empty}
+%\lhead{数学}%枠外右上の文字%
+%\lfoot{日付}%枠外左下の文字%
+%\rfoot{担当：〇〇}%枠外右下の文字%
+%\rhead{\underline{\qquad\qquad}\,年\ \underline{\qquad\qquad}\,組\ \underline{\qquad\qquad}\,番\quad 氏名\,\underline{\hspace{20zw}}}%枠外左上の文字%
+
+\hypersetup{ pdftitle={worksheet_sample_yoko},pdfauthor={Kentaro NAKAHASHI}}
+
+
+\begin{document}
+	\begin{center}
+		\begin{tabular}{|p{6zw}|p{14zw}|p{14zw}|p{7.5zw}|p{7zw}|}
+			\hline
+			
+			\hline\multicolumn{5}{|c|}{本時案}\\\hhline{|=====|}
+			学習内容&学習活動&指導過程&指導上の留意点&観点・評価規準\\\hline
+			導入&1.本時の目標をかく.&1.本時の目標を伝える.& & \\
+			($5\sim8$分)&&&&\\
+			&\multicolumn{2}{c|}{\fbox{めあて：確率を実生活に\,\textbf{応用}\,できるようになろう!}}& & \\
+			&&&& \\\hline
+			展開&&&&\\
+			(20分)&2.問題を読み取る.&2.問題を板書する.&&\\
+			      &{\footnotesize\vspace{-1.5zw}\begin{screen}
+			      		問. 10000人に1人の割合で人間に感染しているウイルスがある.\,\,\,このウイルスに「感染している」「感染していない」を調べる検査の精度は$99\%$である.\,\,\,ある少年はこの検査を受け，「感染している」という結果が出た.\ \ このとき，少年が\ \underline{\textbf{``実際に"}感染している確率}\ は約何$\%$であるか？
+			      \end{screen}}&\aida{2.}(プリントを配布する.)&{\footnotesize *生徒が問題を理解できてない様子の時は，補足する.}&\MARU{1}{ \footnotesize 数学への関心・意欲・態度 }-[\aida{i}i\aida{i}],
+		      
+		      \MARU{2}{ \footnotesize 数学的な見方・考え方 }-[\aida{i}i\aida{i}]\\
+		    &3.問題を解こうとする.&3.状況に応じてヒントを出す.&&\MARU{1}{ \footnotesize 数学への関心・意欲・態度 }-[\aida{i}i\aida{i}],
+		    
+		    \MARU{2}{ \footnotesize 数学的な見方・考え方 }-[\aida{i}i\aida{i}],\ \MARU{3}{ \footnotesize 数学的な技能}[\aida{i}i\aida{i}],\ \MARU{4}{ \footnotesize 数学についての知識・理解 }-[\aida{i}i\aida{i}]-[\,ii\,]\\\
+		    &&&&\\
+		    &4.グループで話し合う.&4.グループ活動させる.
+		    
+		    \aida{4.}机間指導する.&&\MARU{1}{ \footnotesize 数学への関心・意欲・態度 }-[\,ii\,],\ \MARU{4}{ \footnotesize 数学についての知識・理解 }-[iii]\\
+		    &&&&\\
+		    &&&&\\
+		    &&&&\\
+		    (12分)&5.代表で２グループほどが発表
+		    
+		    \aida{5.}する.\ \ また，それを聞く.&5.２つのグループをこちらで選
+		    
+		    \aida{5.}んで発表させる.&{\footnotesize **違う意見になるように選ぶ.}&\MARU{4}{ \footnotesize 数学についての知識・理解 }-[iii]\\
+		    
+		    &&&&\\
+		    
+		    &&&&\\
+		    
+		    &&&&\\
+		    
+		    &&&&\\\hline
+		    
+		    まとめ
+		    
+		    (10分)&6.話を聞く.&6.発表の講評を行う.&{\footnotesize ***生徒に自信を失わせないよう細心の注意を払う.}&\\
+		    
+		    &7.話を聞く.\ \ 板書をプリントに
+		    
+		    \aida{7.}記入する.&7.本時のまとめを行う.
+		    
+		    \aida{7.}次回は問題演習を行う.& &\\\hline\hline
+		    
+		    \hline\multicolumn{1}{|l}{\textbf{備考}}&\multicolumn{1}{|l}{使用教科書$:$}&\multicolumn{1}{|l}{準備物$:$}&&\\
+		    
+		    \multicolumn{1}{|l}{}&\multicolumn{1}{|l}{改訂版 数学A 数研出版}&\multicolumn{1}{|l}{ワークシート}&&\\\hline
+		    
+		\end{tabular}
+	\end{center}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
