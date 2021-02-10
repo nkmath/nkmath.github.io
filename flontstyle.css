@@ -42,21 +42,4 @@ body{
 }
 
 
-/*スマホ用*/
-@media screen and (max-width: 480px) {
-    *{
-        float: none;
-	position: static;
-    }
-    body {
-        border-right: solid 20px white;
-        border-left: solid 20px white;
-        letter-spacing: 2px; /*文字と文字の間隔をあける*/
-    }
-    .line-1{
-    font-size: 110%;
-    }
-}
-
-
 
