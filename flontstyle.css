@@ -5,8 +5,8 @@ body{
   /*background-color: rgb(25,25,25);  */
   background-color: white;
   letter-spacing: 10px; /*文字と文字の間隔をあける*/
-  border-right: solid 60px white;
-  border-left: solid 60px white;
+  border-right: solid 60px #FFFACD;
+  border-left: solid 60px #FFFACD;
   border-bottom: 0;
   margin: 0;
 }
