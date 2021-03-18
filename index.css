@@ -6,13 +6,9 @@ a:link {
 color: orange;
 }
 
-/*a:visited {
-color: #0FF;
+a:visited {
+color: orange;
 }
-
-a:hover {
-color:red;
-}*/
 
 /*a:active {
 color:#33CC00;
