@@ -314,13 +314,13 @@ footer{
     body {
         border-right: solid 20px white;
         border-left: solid 20px white;
-        font-size: 80%;
+        font-size: 60%;
     }
     footer {
-        font-size: 64%;
+        font-size: 50%;
     }
     h2 {
-        font-size: 130%;
+        font-size: 90%;
     }
     nav a{
         letter-spacing: 2px;
@@ -329,6 +329,7 @@ footer{
     nav li{
         width: calc(100% / 6);
     }
+}
 }
 
 
