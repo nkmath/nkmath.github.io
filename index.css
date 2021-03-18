@@ -136,8 +136,8 @@ body{
 	background-color: white;
 	margin: 0;
 	border-top: 0;
-	border-right: solid 60px white;
-	border-left: solid 60px white;
+	border-right: solid 60px #FFFACD;
+	border-left: solid 60px #FFFACD;
 	border-bottom: 0;
 	color: #000;
 }
