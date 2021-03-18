@@ -321,6 +321,13 @@ footer{
     h2 {
         font-size: 130%;
     }
+    nav a{
+        letter-spacing: 2px;
+        font-size: 90%
+    }
+    nav li{
+        width: calc(100% / 6);
+    }
 }
 
 
