@@ -241,6 +241,15 @@ nav a{
 	font-weight: 400;	/*文字の太さを調整*/
 	line-height: 45px;	/*行間の指定（ナビボタンの高さ指定）*/
 }
+
+nav a:link{
+    color: #313131; 
+}
+
+nav a:visited{
+    color: #313131; 
+}
+
 nav a:hover{
 	background-color: orange;	/*背景色の指定*/
 	color: #fff;	/*文字色の変更*/
