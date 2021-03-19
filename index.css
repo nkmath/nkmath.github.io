@@ -309,7 +309,8 @@ footer{
     }
     nav a{
         letter-spacing: 2px;
-        font-size: 90%
+        font-size: 90%;
+	line-height: 40px;
     }
     nav li{
         width: calc(100% / 6);
