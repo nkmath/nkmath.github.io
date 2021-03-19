@@ -141,11 +141,13 @@ body{
 	border-bottom: 0;
 	color: #000;
 }
-/*#fff8dc*/
-/*ivory fffff0 */
-/* 
-body{background-image: url("./img/wall1.png");}-->
-*/
+
+header{
+font-size: 300%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
 
 img {
     width: 100%;
@@ -295,6 +297,9 @@ footer{
         border-right: solid 20px white;
         border-left: solid 20px white;
         font-size: 60%;
+    }
+    header{
+         font-size: 150%;
     }
     footer {
         font-size: 50%;
