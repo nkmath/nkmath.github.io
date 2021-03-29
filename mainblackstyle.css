@@ -280,3 +280,37 @@ footer{
     background-color: #313131;  /*背景色の指定*/
     color: #fff;
 }
+
+/*スマホ用*/
+@media screen and (max-width: 480px) {
+    *{
+        float: none;
+	position: static;
+    }
+    img {
+	max-width: 100%;
+	height: auto;
+    }
+    p {
+        min-width: 100px;
+    }
+    body {
+        border-right: solid 20px black;
+        border-left: solid 20px black;
+        font-size: 60%;
+    }
+    footer {
+        font-size: 50%;
+    }
+    h2 {
+        font-size: 90%;
+    }
+    nav a{
+        letter-spacing: 0px;
+        font-size: 90%
+    }
+    nav li{
+        width: calc(100% / 6);
+    }
+}
+}
