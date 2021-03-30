@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="mainstyle.css">
-    <title>LaTeX</title>
-</head>
-<body>
-    <header>
-<nav>
-<ul>
-<li><a href="index.html">Top</a></li>
-<li><a href="profile.html">自己紹介</a></li>
-<li><a href="mathematics.html">興味</a></li>
-<li><a href="latex.html"><b>LaTeX</b></a></li>
-<li><a href="others.html">SA/TA 他</a></li>
-<li><a href="link.html">Link</a></li>
-</ul>
-</nav>
-</header>
-    <p>
-    LaTeXで文書を作成する際，プリアンブルをいちいち打つのが面倒なので自分用にメモしておきます. <br><br>
-    また，学部生(以下)向けのLaTeX速習講座をおいておきます.
-    <br>
-    <br>
-    <h3>LaTeX超入門【学部生向け】</h3>
-    <ul>
-    <li><a href= "pdf/latex_introduction.pdf" target="_blank" rel="noopener noreferrer">LaTeX速習講座</a></li>
-    <li><a href= "pdf/beamer_introduction.pdf" target="_blank" rel="noopener noreferrer">Beamer速習講座</a></li>
-    </ul>
-    <h4>補足</h4>
-    <p>
-    上記のPDFと重複するかもしれないが，色々書いておく．まず，数式をかく場合は必ず<sup id="ref_1"><!--<a href="#note_1">1)</a>-->1</sup><b>$（ドルマーク）</b>で囲うこと！例えば<b>$y=x$</b>などといったように．くれぐれも$y$$=$$x$などしないように. また，数式中にどうしても日本語を打たなければならないときは，必ず<font color="red"><b>\text{}</b></font>を使うこと！例えば，$a=b<font color="red"><b>\text{かつ}</b></font>b=c$といった感じ．あと，全角スペース，不要な改行は極刑！ここまではTeXの打ち方についての注意．ここからは，文章の書き方について，私が常々心がけていることを書いておく．まず，文章では<font color="blue"><b>任意記号や存在記号は極力使わない</b></font>ようにする．これらの記号はあくまで略記であるため，自分が目の前にいて説明できるときに使うようにしている．なので，Beamerなどのスライド等では使う．また，スペースの関係で誤解のない範囲内であれば使うことはある．また，文中の分数については\frac{a}{b}は使わずに，a/bと書くようにしている．\fracを使うとなんだか気持ちが悪い．ただ，共役指数の表現をするときに，$1/p+1/q=1$とかくと意味は通じるのだが，若干うるさくはなるが$(1/p)+(1/q)=1$とかきたい気持ちにもなる．迷いどころである．$p^{-1}+q^{-1}=1$とかいてもいいような気がするが，代数学の人たちのことを思えば，逆元の記号をそう軽々しく書いていいものかという気持ちにもなる．まぁこの辺は好みの問題である．と勝手なことを色々かいたが，気なったことをこれからも書いていこうと思う．
-    </p>
-    <br>
-    <br>
-    <hr>
-    <ol class="note">
-    <small>
-    <li id="note_1"><!--<a href="#ref_1">^</a>-->"必ず"とは書いたものの，align環境やequation環境等はすでに数式環境なので打つ必要はない，というか打ってはいけない．最初はよくわからなくても慣れればわかる.</li>
-    </small>
-    </ol>
-    </hr>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <title>LaTeX</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Top</a></li>
+                    <li><a href="profile.html">自己紹介</a></li>
+                    <li><a href="mathematics.html">興味</a></li>
+                    <li><a href="latex.html"><b>LaTeX</b></a></li>
+                    <li><a href="others.html">SA/TA 他</a></li>
+                    <li><a href="link.html">Link</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <p>
+            LaTeXで文書を作成する際，プリアンブルをいちいち打つのが面倒なので自分用にメモしておきます. 
+            <br>
+            <br>
+            また，学部生(以下)向けのLaTeX速習講座をおいておきます.
+            <br>
+            <br>
+        <h3>LaTeX超入門【学部生向け】</h3>
+        <ul>
+            <li><a href= "pdf/latex_introduction.pdf" target="_blank" rel="noopener noreferrer">LaTeX速習講座</a></li>
+            <li><a href= "pdf/beamer_introduction.pdf" target="_blank" rel="noopener noreferrer">Beamer速習講座</a></li>
+        </ul>
+        <h4>補足</h4>
+        <p>
+            上記のPDFと重複するかもしれないが，色々書いておく．まず，数式をかく場合は必ず<sup id="ref_1"><!--<a href="#note_1">1)</a>-->1</sup><b>$（ドルマーク）</b>で囲うこと！例えば<b>$y=x$</b>などといったように．くれぐれも$y$$=$$x$などしないように. また，数式中にどうしても日本語を打たなければならないときは，必ず<font color="red"><b>\text{}</b></font>を使うこと！例えば，$a=b<font color="red"><b>\text{かつ}</b></font>b=c$といった感じ．あと，全角スペース，不要な改行は極刑！ここまではTeXの打ち方についての注意．ここからは，文章の書き方について，私が常々心がけていることを書いておく．まず，文章では<font color="blue"><b>任意記号や存在記号は極力使わない</b></font>ようにする．これらの記号はあくまで略記であるため，自分が目の前にいて説明できるときに使うようにしている．なので，Beamerなどのスライド等では使う．また，スペースの関係で誤解のない範囲内であれば使うことはある．また，文中の分数については\frac{a}{b}は使わずに，a/bと書くようにしている．\fracを使うとなんだか気持ちが悪い．ただ，共役指数の表現をするときに，$1/p+1/q=1$とかくと意味は通じるのだが，若干うるさくはなるが$(1/p)+(1/q)=1$とかきたい気持ちにもなる．迷いどころである．$p^{-1}+q^{-1}=1$とかいてもいいような気がするが，代数学の人たちのことを思えば，逆元の記号をそう軽々しく書いていいものかという気持ちにもなる．まぁこの辺は好みの問題である．と勝手なことを色々かいたが，気なったことをこれからも書いていこうと思う．
+        </p>
+        <br>
+        <br>
+        <hr>
+        <ol class="note">
+            <small>
+                <li id="note_1"><!--<a href="#ref_1">^</a>-->"必ず"とは書いたものの，align環境やequation環境等はすでに数式環境なので打つ必要はない，というか打ってはいけない．最初はよくわからなくても慣れればわかる.</li>
+            </small>
+        </ol>
+        </hr>
     <br>
     <h3>プリアンブルの例（および備忘録）</h3>
     <p>
     <ul>
-    <li>LaTeXサンプル (<a href= "tex/latex_sample.html" target="_blank" rel="noopener noreferrer">コピペ用</a>，<a href= "tex/latex_sample.tex" download="latex_sample.tex">ダウンロード用</a>，<a href= "tex/latex_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
-    <li>Beamerサンプル (<a href= "tex/beamer_sample.html" target="_blank" rel="noopener noreferrer">コピペ用</a>，<a href= "tex/beamer_sample.tex" download="beamer_sample.tex">ダウンロード用</a>，<a href= "tex/beamer_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
+        <li>LaTeXサンプル (<a href= "tex/latex_sample.html" target="_blank" rel="noopener noreferrer">コピペ用</a>，<a href= "tex/latex_sample.tex" download="latex_sample.tex">ダウンロード用</a>，<a href= "tex/latex_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
+        <li>Beamerサンプル (<a href= "tex/beamer_sample.html" target="_blank" rel="noopener noreferrer">コピペ用</a>，<a href= "tex/beamer_sample.tex" download="beamer_sample.tex">ダウンロード用</a>，<a href= "tex/beamer_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
     </ul>
     <p>
-    コピペ用はHTML形式，ダウンロード用はTeXファイル，見本はPDFファイルである.
-    <br>
+        コピペ用はHTML形式，ダウンロード用はTeXファイル，見本はPDFファイルである.
+        <br>
     </p>
     <h3>指導案など</h3>
     LaTeXを始めると，なんでもLaTeXで作りたくなる病気にかかるので，過去に作った指導案などのファイルを置いておく．
     <ul>
-    <li>ワークシートサンプル (<a href= "tex/worksheet_sample.tex" download="worksheet_sample.tex">ダウンロード</a>，<a href= "tex/worksheet_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
-    <li>本事案サンプル【岡山形式】 (<a href= "tex/honjian_sample.tex" download="honjian_sample.tex">ダウンロード</a>，<a href= "tex/honjian_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
-    <li>指導案サンプル【高等学校・香川】 (<a href= "tex/shidoan_sample.tex" download="shidoan_sample.tex">ダウンロード</a>，<a href= "tex/shidoan_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
+        <li>ワークシートサンプル (<a href= "tex/worksheet_sample.tex" download="worksheet_sample.tex">ダウンロード</a>，<a href= "tex/worksheet_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
+        <li>本事案サンプル【岡山形式】 (<a href= "tex/honjian_sample.tex" download="honjian_sample.tex">ダウンロード</a>，<a href= "tex/honjian_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
+        <li>指導案サンプル【高等学校・香川】 (<a href= "tex/shidoan_sample.tex" download="shidoan_sample.tex">ダウンロード</a>，<a href= "tex/shidoan_sample.pdf" target="_blank" rel="noopener noreferrer">見本</a>)</li>
     </ul>
     <br>
     <br>
     </p>
-    </body>
+</body>
 </html>
