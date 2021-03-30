@@ -223,7 +223,7 @@ nav ul{
 	list-style: none; /*リストのスタイルを削除*/
 }
 nav li{
-	width: calc(100% / 5);	/*横幅の指定*/
+	width: calc(100% / 6);	/*横幅の指定*/
 	/*border-left: 1px solid orange;	線を描く*/
 	/*box-sizing: border-box;  線の幅をliの横幅に含める*/
 	text-align: center; /*文字を中央に*/
@@ -327,7 +327,7 @@ footer{
         font-size: 90%
     }
     nav li{
-        width: calc(100% / 6);
+        width: calc(100% / 7);
     }
 }
 }
