@@ -206,6 +206,11 @@ img {
 ol li {
   padding-top:10px;
   padding-bottom:10px;
+  width: 90vh;
+}
+
+ul {
+  width: 90vh;
 }
 
 figure{
