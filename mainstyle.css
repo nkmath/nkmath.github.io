@@ -125,7 +125,9 @@ h3:after {
   width: 30%;
 }
 
-
+td.example{
+  white-space: nowrap;
+}
 
 p {
    max-width: 800px;
