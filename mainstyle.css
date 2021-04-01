@@ -308,9 +308,6 @@ footer{
 	max-width: 100%;
 	height: auto;
     }
-    p {
-        min-width: 100px;
-    }
     body {
         border-right: solid 20px white;
         border-left: solid 20px white;
@@ -318,6 +315,10 @@ footer{
     }
     footer {
         font-size: 50%;
+    }
+    p{
+	font-size: 60%;
+        min-width: 100px;
     }
     h2 {
         font-size: 90%;
