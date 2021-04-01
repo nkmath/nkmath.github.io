@@ -133,7 +133,7 @@ td.example{
 p {
    max-width: 800px;
    min-width: 500px;
-   width: 85%;
+   width: 85vw;
    margin-left: 10px;
 }
 
