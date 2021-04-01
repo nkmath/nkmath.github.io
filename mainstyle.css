@@ -313,8 +313,8 @@ footer{
 	height: auto;
     }
     body {
-        border-right: solid 20px white;
-        border-left: solid 20px white;
+        border-right: solid 20px #FFFACD;
+        border-left: solid 20px #FFFACD;
         font-size: 60%;
     }
     footer {
