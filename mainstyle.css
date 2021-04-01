@@ -320,6 +320,9 @@ footer{
 	font-size: 60%;
         min-width: 100px;
     }
+    table{
+	font-size: 60%;
+    }
     h2 {
         font-size: 90%;
     }
