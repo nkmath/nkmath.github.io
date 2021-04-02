@@ -42,4 +42,17 @@ body{
 }
 
 
+/*スマホ用*/
+@media screen and (max-width: 480px) {
+  * {
+    float: none;
+    position: static;
+  }
+    p {
+        font-size: 60%;
+    }
+}
+
+
+
 
