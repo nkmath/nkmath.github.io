@@ -55,7 +55,8 @@ body{
         font-size: 60%;
     }
   .line-1 {
-    font-size: 150%;
+    font-size: 120%;
+    width: 10em;
   }
 }
 
