@@ -48,6 +48,9 @@ body{
     float: none;
     position: static;
   }
+  body {
+    letter-spacing: 0px;
+  }
     p {
         font-size: 60%;
     }
