@@ -42,7 +42,7 @@ body{
 }
 
 
-/*スマホ用*/
+/*スマホ用
 @media screen and (max-width: 480px) {
   * {
     float: none;
@@ -54,7 +54,7 @@ body{
   .line-1 {
     font-size: 80%;
   }
-}
+}*/
 
 
 
