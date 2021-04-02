@@ -53,6 +53,7 @@ body{
     }
   .line-1 {
     font-size: 80%;
+    width: 30em;
   }
 }
 
