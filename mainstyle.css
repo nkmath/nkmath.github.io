@@ -328,6 +328,9 @@ footer{
 	font-size: 60%;
     }
     h2 {
+        font-size: 100%;
+    }
+    h3 {
         font-size: 90%;
     }
     nav a{
