@@ -356,4 +356,8 @@ footer{
     nav li{
         width: calc(100% / 6);
     }
+    .flash-title {
+	-webkit-animation: fade-in-out 7s ease 0s forwards;
+	animation: fade-in-out 7s ease 0s forwards;
+    }
 }
