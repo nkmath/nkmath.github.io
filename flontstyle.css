@@ -20,7 +20,7 @@ body{
   letter-spacing: 10px; /*文字と文字の間隔をあける
   border-right: solid 60px white;
   border-left: solid 60px white;*/
-  background: linear-gradient(-45deg, rgba(246, 200, 0, .8), rgba(250, 50, 0, .8)) fixed,
+  background: linear-gradient(-45deg, rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)) fixed,
   url(image/C2_sr_1.jpg) no-repeat center center;
   background-size: cover;
   letter-spacing: 10px;
