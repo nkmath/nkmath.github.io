@@ -1,3 +1,15 @@
+a:link {
+  color: #0FF;
+}
+
+a:visited {
+  color: #0FF;
+}
+
+a:hover {
+  color: #0FF;
+}
+
 body{
   font: "Hiragino Mincho Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
   height: calc(100vh - 8em);
@@ -11,6 +23,7 @@ body{
   background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8)) fixed,
   url(image/C2_sr_1.jpg) no-repeat center center;
   background-size: cover;
+  letter-spacing: 11px;
   border-bottom: 0;
   margin: 0;
 }
