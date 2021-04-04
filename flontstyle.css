@@ -12,7 +12,7 @@ a:hover {
 
 body{
   font: "Hiragino Mincho Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
-  /*height: calc(100vh - 8em);*/
+  height: 100vh;
   /*padding: 4em;*/
   color: rgba(255,255,255,.75); 
   /*background-color: rgb(25,25,25);  
