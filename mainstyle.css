@@ -206,6 +206,13 @@ img {
   }
 }
 
+ul {
+	max-width: 70vw;
+}
+
+ol {
+	max-width: 70vw;
+}
 
 ol li {
   padding-top:10px;
