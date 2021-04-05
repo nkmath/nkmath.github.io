@@ -126,6 +126,10 @@ h3:after {
   width: 30%;
 }
 
+h4 {
+	margin-left: 3px;
+}
+
 td.example{
   white-space: nowrap;
 }
@@ -133,7 +137,7 @@ td.example{
 p {
    /*max-width: 800px;
    min-width: 500px;*/
-   width: calc(90vw - 10px);
+   max-width: 90vw;
    margin-left: 10px;
 }
 
