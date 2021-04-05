@@ -131,7 +131,12 @@ h4 {
 }
 
 td.example{
-  white-space: nowrap;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+td.ue{
+  vertical-align: top;
 }
 
 p {
