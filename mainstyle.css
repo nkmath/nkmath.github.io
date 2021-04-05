@@ -142,7 +142,7 @@ td.ue{
 p {
    /*max-width: 800px;
    min-width: 500px;*/
-   max-width: 70vw;
+   max-width: 75vw;
    margin-left: 10px;
 }
 
@@ -212,11 +212,11 @@ img {
 }
 
 ul {
-	max-width: 70vw;
+	max-width: 65vw;
 }
 
 ol {
-	max-width: 70vw;
+	max-width: 65vw;
 }
 
 ol li {
@@ -341,6 +341,9 @@ footer{
     p{
 	font-size: 60%;
         /*min-width: 100px;*/
+    }
+    small {
+	    font-size: 40%;
     }
     ol {
 	    font-size: 60%;
