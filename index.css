@@ -124,9 +124,9 @@ h3:after {
 
 
 p {
-	max-width: 800px;
-	min-width: 500px;
-	width: 85%;
+	/*max-width: 800px;
+	min-width: 500px;*/
+	max-width: 75vw;
 	margin-left: 20px;
 }
 
