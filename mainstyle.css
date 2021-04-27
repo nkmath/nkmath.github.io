@@ -333,13 +333,13 @@ footer{
     body {
         border-right: solid 20px #FFFACD;
         border-left: solid 20px #FFFACD;
-        font-size: 60%;
+        font-size: 100%;
     }
     footer {
         font-size: 50%;
     }
     p{
-	font-size: 60%;
+	font-size: 80%;
         /*min-width: 100px;*/
     }
     small {
@@ -370,6 +370,9 @@ footer{
     nav li{
         width: calc(100% / 6);
     }
+    header {
+	    font-size: 60%;
+	}
 }
 }
 
