@@ -198,15 +198,15 @@ footer{
     position: static;
   }
   body {
-    letter-spacing: 6px;
+    letter-spacing: 5px;
     font-size: 60%;
   }
   p {
-    font-size: 40%;
+    font-size: 30%;
   }
   .line-1 {
     font-size: 180%;
-    max-width: 20em;
+    max-width: 21em;
   }
 }
 
