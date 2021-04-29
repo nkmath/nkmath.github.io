@@ -224,6 +224,7 @@ footer{
 	  background: linear-gradient(-45deg, rgba(200, 200, 200, .6), rgba(200, 200, 200, .6)) fixed,
   url(image/C2_last.jpg) no-repeat -150px center;
 	  background-size: cover;
+	  font-size: 100%;
   }
   header{
          font-size: 180%;
