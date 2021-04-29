@@ -360,6 +360,10 @@ footer{
     h4 {
 	    font-size: 80%
     }
+    nav a{
+        letter-spacing: 0px;
+        font-size: 90%
+    }
     header{
          font-size: 120%;
     }
