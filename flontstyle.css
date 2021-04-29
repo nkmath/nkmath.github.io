@@ -194,9 +194,11 @@ footer{
     position: static;
   }
   body {
-    letter-spacing: 2px;
-    background: linear-gradient(-45deg, rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)) fixed,
-  url(image/C2_flont.jpg) no-repeat center -15px;
+	  letter-spacing: 2px;
+	  /*background: linear-gradient(-45deg, rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)) fixed,
+  url(image/C2_flont.jpg) no-repeat center -15px;*/
+	  background: linear-gradient(-45deg, rgba(200, 200, 200, .6), rgba(200, 200, 200, .6)) fixed,
+  url(image/C2_last.jpg) no-repeat -150px center;
 	  background-size: cover;
   }
   header{
@@ -206,7 +208,7 @@ footer{
 	width: 25%;	/*横幅の指定*/
 	}
     p {
-        font-size: 60%;
+        font-size: 70%;
     }
   .line-1 {
     font-size: 120%;
