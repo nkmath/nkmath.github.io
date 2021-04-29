@@ -187,6 +187,23 @@ footer{
 }
 
 
+
+/*---------------レスポンシブ-------------------*/
+
+
+/*タブレット・スマホ横画面用*/
+@media screen and (max-width: 900px) {
+  * {
+    float: none;
+    position: static;
+  }
+  body {
+    letter-spacing: 8px;
+    font-size: 60%;
+  }
+}
+
+
 /*スマホ用*/
 @media screen and (max-width: 480px) {
   * {
