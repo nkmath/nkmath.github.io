@@ -1,17 +1,17 @@
 a:link {
-  color: #0FF;
+  color: black;
 }
 
 a:visited {
-  color: #0FF;
+  color: black;
 }
 
 a:hover {
-  color: #0FF;
+  color: black;
 }
 
 body{
-  font: "Hiragino Mincho Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   height: 100vh;
   /*padding: 4em;*/
   color: rgba(255,255,255,.75); 
@@ -20,12 +20,24 @@ body{
   letter-spacing: 10px; /*文字と文字の間隔をあける
   border-right: solid 60px white;
   border-left: solid 60px white;*/
+  /*background: linear-gradient(-45deg, rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)) fixed,
+  url(image/C2_flont.jpg) no-repeat 0px -450px;*/
   background: linear-gradient(-45deg, rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)) fixed,
-  url(image/C2_sr_1.jpg) no-repeat center center;
+  url(image/Ridai_A5.jpg) no-repeat -450px 0px;
+  /*background: linear-gradient(-45deg, rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)) fixed,
+  url(image/C2_sr_1.jpg) no-repeat center center;*/
   background-size: cover;
   letter-spacing: 10px;
   border-bottom: 0;
   margin: 0;
+  overflow: hidden;
+}
+
+p {
+	/*max-width: 800px;
+	min-width: 500px;*/
+	max-width: 75vw;
+	margin-left: 10px;
 }
 
 
@@ -58,6 +70,122 @@ body{
   to{border-right-color: transparent;}
 }
 
+header {
+    /*font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
+    font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    /*background-color: orange;*/
+    /*background-color: #fff;*/
+	font-size: 350%;
+	color: #000;
+	/*color: orange;*/
+	text-shadow:0.5px 0 0 #fff,0 0.5px 0 #fff,-0.5px 0 0 #fff,0 -0.5px 0 #fff,2.5px 2.5px 0 #fff;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	letter-spacing: 0px;
+}
+
+/*****NAV*****/
+nav{
+	font-family: sans-serif;
+	width: 100vw;	/*横幅の指定*/
+	/*border-top: 1px solid orange;	上部の線の色を指定*/
+	/*border-bottom: 1px solid orange;	下部の線の色を指定*/
+	margin-bottom: 5px;	/**/
+	overflow: hidden;	/*おまじない*/
+}
+nav ul{
+	width: 10%;	/*横幅の指定*/
+	margin: auto;	/*中央に配置する*/
+	list-style: none; /*リストのスタイルを削除*/
+}
+nav li{
+	width: calc(100% / 1);	/*横幅の指定*/
+	/*border-left: 1px solid orange;	線を描く*/
+	box-sizing: border-box; /*線の幅をliの横幅に含める*/
+	text-align: center;	/*文字を中央に*/
+	float: left;	/*左から並べる*/
+}
+/*nav li:last-child{
+	border-right: 1px solid orange;	/*li要素の最後の物は右側に線を描く
+}*/
+nav a{
+	display: block;	/*1つのli全体にリンクを有効にする*/
+	background-color: white;
+	text-decoration: none;	/*ブラウザ標準のリンク装飾をオフに*/
+	color:#313131;	/*文字色の変更*/
+	font-size: 110%;	/*フォントサイズの指定*/
+	letter-spacing: 1px;	/*文字と文字の間隔をあける*/
+	font-weight: 400;	/*文字の太さを調整*/
+	line-height: 45px;	/*行間の指定（ナビボタンの高さ指定）*/
+}
+nav a:hover{
+	background-color: orange;	/*背景色の指定*/
+	color: #fff;	/*文字色の変更*/
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;	/*ホバー時の動きをなめらかにする*/
+}
+
+.vertical-middle{
+  height: 100vh;
+  display: table-cell; /* インライン要素にすることで横に回り込む*/
+  vertical-align: middle; /* 上下中央に寄せる */
+}
+
+.flash-title {
+  display: table;　/*table*/
+  position: fixed;
+  vertical-align: middle;
+  margin: 0 auto; 
+ /* width: 100%;
+  height: 100%;*/
+  background: rgba(0,0,0,0);
+  -webkit-animation: fade-in-out 7.75s ease 0s forwards;
+  animation: fade-in-out 7.75s ease 0s forwards;
+  visibility: hidden;
+  z-index: 1;
+}
+
+/*.flash-title p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 90px;
+  color: #fff;
+}*/
+
+.flash-title iframe {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+@-webkit-keyframes fade-in-out {
+  0% {visibility: hidden; opacity: 1;}
+  80% {visibility: visible; opacity: 1;}
+ 100% {visibility: hidden; opacity: 0;}
+}
+
+@keyframes fade-in-out {
+  0% {visibility: hidden; opacity: 1;}
+  80% {visibility: visible; opacity: 1;}
+ 100% {visibility: hidden; opacity: 0;}
+}
+
+footer{
+	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+	letter-spacing: 1px;
+	position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+    font-size: 80%; /*フォントサイズの指定*/
+    width: 100%;    /*横幅の指定*/
+    text-align: center; /*文字の中央寄せ*/
+    padding-top: 15px;  /*文字上部の余白指定*/
+    padding-bottom: 15px;   /*文字下部の余白指定*/
+    background-color: #313131;  /*背景色の指定*/
+    color: #fff;
+}
+
 
 /*スマホ用*/
 @media screen and (max-width: 480px) {
@@ -67,7 +195,15 @@ body{
   }
   body {
     letter-spacing: 2px;
+    background: linear-gradient(-45deg, rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)) fixed,
+  url(image/C2_flont.jpg) no-repeat center center;
   }
+  header{
+         font-size: 180%;
+    }
+    nav ul{
+	width: 25%;	/*横幅の指定*/
+	}
     p {
         font-size: 60%;
     }
@@ -75,6 +211,13 @@ body{
     font-size: 120%;
     max-width: 14em;
   }
+  .flash-title {
+	-webkit-animation: fade-in-out 6.5s ease 0s forwards;
+	animation: fade-in-out 6.5s ease 0s forwards;
+    }
+    footer {
+        font-size: 20%;
+    }
 }
 
 
