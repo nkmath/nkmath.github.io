@@ -201,6 +201,13 @@ footer{
     letter-spacing: 8px;
     font-size: 60%;
   }
+  p {
+    font-size: 40%;
+  }
+  .line-1 {
+    font-size: 150%;
+    max-width: 17em;
+  }
 }
 
 
