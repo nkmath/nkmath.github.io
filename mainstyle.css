@@ -369,7 +369,7 @@ footer{
 
 
 
-/*タブレット・スマホ横画面用*/
+/*タブレット縦画面用*/
 @media screen and (max-width: 900px) {
 	.pc {
 		display: none;
@@ -467,12 +467,52 @@ footer{
 	body {
         font-size: 100%;
     }
+    /*footer {
+        font-size: 20%;
+    }
+    p{
+	font-size: 80%;
+    }
+    small {
+	    font-size: 40%;
+    }
+    ol {
+	    font-size: 80%;
+    }
+    ul {
+	    font-size: 80%;
+    }
+    table{
+	font-size: 80%;
+    }
+    h2 {
+        font-size: 100%;
+    }
+    h3 {
+        font-size: 90%;
+    }
+    h4 {
+	    font-size: 80%
+    }
+    nav a{
+        letter-spacing: 0px;
+        font-size: 90%
+    }
+    header{
+         font-size: 120%;
+    }*/
+}
+
+/*スマホ横画面用*/
+@media screen and (max-width: 760px) {
+    body {
+	font-size: 100%;
+    }
     footer {
         font-size: 20%;
     }
     p{
 	font-size: 80%;
-        /*min-width: 100px;*/
     }
     small {
 	    font-size: 40%;
@@ -503,7 +543,6 @@ footer{
          font-size: 120%;
     }
 }
-
 
 /*スマホ用*/
 @media screen and (max-width: 480px) {
