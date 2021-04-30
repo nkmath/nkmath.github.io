@@ -198,11 +198,11 @@ footer{
     position: static;
   }
   .line-1 {
-    max-width: 22em;
+    max-width: 20em;
   }
   @keyframes typewriter{
   from{width: 0;}
-  to{width: 20em;}
+  to{width: 19em;}
   }
 }
 
