@@ -191,8 +191,22 @@ footer{
 
 /*---------------レスポンシブ-------------------*/
 
+/*タブレット縦画面用*/
+@media screen and (max-width: 900px) {
+  * {
+    float: none;
+    position: static;
+  }
+  .line-1 {
+    max-width: 22em;
+  }
+  @keyframes typewriter{
+  from{width: 0;}
+  to{width: 20em;}
+  }
+}
 
-/*タブレット・スマホ横画面用*/
+/*スマホ横画面用*/
 @media screen and (max-width: 760px) {
   * {
     float: none;
@@ -212,7 +226,7 @@ footer{
   @keyframes typewriter{
   from{width: 0;}
   to{width: 18.5em;}
-}
+  }
 }
 
 
