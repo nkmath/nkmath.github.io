@@ -159,7 +159,7 @@ body{
 }
 
 .logo {
-	width: 40%;
+	width: 80%;
 	font-size: 170%;
 	line-height: 45px;
 	margin-left: 5px;
@@ -271,7 +271,7 @@ nav{
 	overflow: hidden; /*おまじない*/
 }
 nav ul{
-	width: 50%; /*横幅の指定*/
+	width: 80%; /*横幅の指定*/
 	margin: 0 0 0 auto;
 	list-style: none; /*リストのスタイルを削除*/
 }
