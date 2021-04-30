@@ -193,7 +193,7 @@ footer{
 
 
 /*タブレット・スマホ横画面用*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 760px) {
   * {
     float: none;
     position: static;
