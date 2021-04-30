@@ -7,18 +7,41 @@
         <title>興味｜中橋健太郎のホームページ</title>
     </head>
     <body>
-        <header>
+        <!--スマホ用-->
+        <header class="headersp">
+            <div class="logosp">
+                <a href="index.html">中橋健太郎のホームページ</a>
+            </div>
+            <div class="drawer">
+                <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+                <label for="drawer-check" class="drawer-open"><span></span></label>
+                <label for="drawer-check" class="drawer-close"></label>
+                <nav class="drawer-content">
+                    <ul>
+                        <li><a href="profile.html">略歴</a></li>
+                        <li><a href="mathematics.html"><b>興味</b></a></li>
+                        <li><a href="link.html">リンク</a></li>
+                        <li><a href="others.html">その他</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!--デスクトップ用-->
+        <header class="pc">
+            <div class="logo">
+                <a href="index.html">中橋健太郎のホームページ</a>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="profile.html">自己紹介</a></li>
+                    <li><a href="profile.html">略歴</a></li>
                     <li><a href="mathematics.html"><b>興味</b></a></li>
-                    <!--<li><a href="latex.html">LaTeX</a></li>-->
-                    <li><a href="link.html">Links</a></li>
+                    <li><a href="link.html">リンク</a></li>
                     <li><a href="others.html">その他</a></li>
                 </ul>
             </nav>
         </header>
+        
         <p>
             ここでは私が興味を持っていることなど(主に数学)について気の向くままに書いていこうと思います．
         </p>

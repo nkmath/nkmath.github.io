@@ -7,17 +7,41 @@
         <title>その他｜中橋健太郎のホームページ</title>
     </head>
     <body>
-        <header>
+        <!--スマホ用-->
+        <header class="headersp">
+            <div class="logosp">
+                <a href="index.html">中橋健太郎のホームページ</a>
+            </div>
+            <div class="drawer">
+                <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+                <label for="drawer-check" class="drawer-open"><span></span></label>
+                <label for="drawer-check" class="drawer-close"></label>
+                <nav class="drawer-content">
+                    <ul>
+                        <li><a href="profile.html">略歴</a></li>
+                        <li><a href="mathematics.html">興味</a></li>
+                        <li><a href="link.html">リンク</a></li>
+                        <li><a href="others.html"><b>その他</b></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!--デスクトップ用-->
+        <header class="pc">
+            <div class="logo">
+                <a href="index.html">中橋健太郎のホームページ</a>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="profile.html">自己紹介</a></li>
+                    <li><a href="profile.html">略歴</a></li>
                     <li><a href="mathematics.html">興味</a></li>
-                    <li><a href="link.html">Links</a></li>
+                    <li><a href="link.html">リンク</a></li>
                     <li><a href="others.html"><b>その他</b></a></li>
                 </ul>
             </nav>
         </header>
+        
         <p>
             自分の記録用にいろいろ書いておきます.
         </p>

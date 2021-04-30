@@ -4,21 +4,44 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
         <link rel="stylesheet" type="text/css" href="mainstyle.css">
-        <title>プロフィール｜中橋健太郎のホームページ</title>
+        <title>略歴｜中橋健太郎のホームページ</title>
     </head>
     <body>
-        <header>
+    <!--スマホ用-->
+        <header class="headersp">
+            <div class="logosp">
+                <a href="index.html">中橋健太郎のホームページ</a>
+            </div>
+            <div class="drawer">
+                <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+                <label for="drawer-check" class="drawer-open"><span></span></label>
+                <label for="drawer-check" class="drawer-close"></label>
+                <nav class="drawer-content">
+                    <ul>
+                        <li><a href="profile.html"><b>略歴</b></a></li>
+                        <li><a href="mathematics.html">興味</a></li>
+                        <li><a href="link.html">リンク</a></li>
+                        <li><a href="others.html">その他</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!--デスクトップ用-->
+        <header class="pc">
+            <div class="logo">
+                <a href="index.html">中橋健太郎のホームページ</a>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="profile.html"><b>自己紹介</b></a></li>
+                    <li><a href="profile.html"><b>略歴</b></a></li>
                     <li><a href="mathematics.html">興味</a></li>
-                    <!--<li><a href="latex.html">LaTeX</a></li>-->
-                    <li><a href="link.html">Links</a></li>
+                    <li><a href="link.html">リンク</a></li>
                     <li><a href="others.html">その他</a></li>
                 </ul>
             </nav>
         </header>
+        
         <h2>自己紹介.</h2>
         <p>
             名前：中橋 健太郎  (なかはし けんたろう)
@@ -56,12 +79,12 @@
         <table style="margin-left:10px;">
             <tr>
                 <td class="example">2021年5月-現在</td>
-                <td class="ue">愛媛県立学校 非常勤講師（数学）
+                <td class="ue">愛媛県立学校 時間講師（数学）
             </tr>
         </table>
-    </p>-->
+    </p>
     
-    <!--<h2>賞罰.</h2>
+    <h2>賞罰.</h2>
     <p>
         <table style="margin-left:10px;">
             <tr>

@@ -157,11 +157,45 @@ body{
 	border-bottom: 0;
 	min-height: 100vh;
 }
-/*#fff8dc*/
-/*ivory fffff0 */
-/* 
-body{background-image: url("./img/wall1.png");}-->
-*/
+
+.logo {
+	width: 40%;
+	font-size: 170%;
+	line-height: 45px;
+	margin-left: 5px;
+}
+
+
+header {
+	display: flex;
+	border-bottom: 5px solid #808080; /*下部の線の色を指定*/
+	/*background-color: #f1f1f1;
+	position: fixed;
+	left:0px ;
+	right:0px;
+	top: 0;
+	z-index: 10;*/
+}
+
+header a {
+	text-decoration: none; /* リンクの下線を削除 */
+}
+
+header a:link {
+	color: #000000;
+}
+
+header a:visited {
+	color: #000000;
+}
+
+header a:hover {
+	color: #000000;
+}
+
+header a:active {
+	color: #000000;
+}
 
 img {
     width: 100%;
@@ -233,17 +267,16 @@ figure{
 nav{
 	width: 100%; /*横幅の指定*/
 	/*border-top: 1px solid orange; 上部の線の色を指定*/
-	border-bottom: 5px solid #808080; /*下部の線の色を指定*/
-	margin-bottom: 5px; /**/
+	/*margin-bottom: 5px; */
 	overflow: hidden; /*おまじない*/
 }
 nav ul{
-	width: 90%; /*横幅の指定*/
-	margin: auto; /*上右下左*/
+	width: 50%; /*横幅の指定*/
+	margin: 0 0 0 auto;
 	list-style: none; /*リストのスタイルを削除*/
 }
 nav li{
-	width: calc(100% / 5);	/*横幅の指定*/
+	width: calc(100% / 4);	/*横幅の指定*/
 	/*border-left: 1px solid orange;	線を描く*/
 	/*box-sizing: border-box;  線の幅をliの横幅に含める*/
 	text-align: center; /*文字を中央に*/
@@ -326,6 +359,11 @@ footer{
 
 
 
+.headersp {
+	display: none;
+}
+
+
 /*----------------------レスポンシブ---------------------------*/
 
 
@@ -333,6 +371,96 @@ footer{
 
 /*タブレット・スマホ横画面用*/
 @media screen and (max-width: 900px) {
+	.pc {
+		display: none;
+	}
+	/*-----------------------ハンバーガー------------------------*/
+	.headersp {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 5px;
+		background: #fff;
+	}
+	.logosp {
+		font-size: 100%;
+	}
+	.drawer-hidden {
+		display: none;
+	}
+	.drawer-open {
+		display: flex;
+		height: 60px;
+		width: 60px;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 98;/* 重なり順を一番下に */
+		cursor: pointer;
+	}
+	.drawer-open span,
+	.drawer-open span:before,
+	.drawer-open span:after {
+		content: '';
+		display: block;
+		height: 3px;
+		width: 25px;
+		border-radius: 3px;
+		background: #333;
+		 transition: 0.5s;
+		 position: absolute;
+	 }
+	 .drawer-open span:before {
+	 	bottom: 8px;
+	 }
+	 .drawer-open span:after {
+	 	top: 8px;
+	 }
+	 .drawer-content {
+	 	width: 70%;/* ここの割合を小さくすると閉じる部分の領域が広がる */
+	 	height: 100%;
+	 	position: fixed;
+	 	top: 0;
+	 	left: 100%;/* メニューを画面外へ */
+	 	z-index: 100;/* 重なり順を一番上に */
+	 	background: #fff;
+	 	transition: .5s;
+	  }
+	  #drawer-check:checked ~ .drawer-content {
+	  	left: 0;/* メニューを画面内へ */
+	  }
+	  .drawer-close {
+	  	width: 100%;
+	  	height: 100%;
+	  	background: orange;
+	  	position: fixed;
+	  	top: 0;
+	  	left: 100%;/* 閉じるための要素を画面外へ */
+	  	z-index: 99;/* 重なり順をメニューより下に*/
+	  	transition: .5s;
+	  }
+	  #drawer-check:checked ~ .drawer-close {
+	  	left: 0;/* 閉じるための要素を画面内へ */
+	  }
+
+	nav ul {
+		width: 50%;
+		margin: 0 auto;
+		width: auto;
+	}
+	
+	nav li {
+		width: 50%;
+		clear: left;
+		display: list-item;
+		border-bottom: 1px solid orange;
+	}
+	
+	nav a:hover{
+		background-color: #fff; /*背景色の指定*/
+		color: #000;	/*文字色の変更*/
+	}
+	
 	body {
         font-size: 100%;
     }
@@ -426,6 +554,10 @@ footer{
     }
     header {
 	    font-size: 90%;
+	}
+	.logo{
+		font-size: 100%;
+		width: 60%;
 	}
     footer {
         font-size: 20%;
