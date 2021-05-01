@@ -467,9 +467,9 @@ footer{
 	body {
         font-size: 100%;
     }
-    /*footer {
-        font-size: 20%;
-    }*/
+    footer {
+        font-size: 70%;
+    }
     p{
 	font-size: 90%;
     }
