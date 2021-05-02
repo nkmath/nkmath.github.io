@@ -233,11 +233,15 @@ footer a:hover {
   }
   .line-1 {
     font-size: 250%;
-    max-width: 23em;
+    max-width: 19em;
   }
   @keyframes typewriter{
   from{width: 0;}
-  to{width: 18.5em;}
+  to{width: 16em;}
+  }
+  footer {
+    padding-top: 10px;  /*文字上部の余白指定*/
+    padding-bottom: 10px;   /*文字下部の余白指定*/ 
   }
 }
 
