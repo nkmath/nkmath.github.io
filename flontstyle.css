@@ -241,7 +241,7 @@ footer{
 	  /*background: linear-gradient(-45deg, rgba(200, 200, 200, .5), rgba(200, 200, 200, .5)) fixed,
   url(image/C2_flont.jpg) no-repeat center -15px;*/
 	  background: linear-gradient(-45deg, rgba(200, 200, 200, .6), rgba(200, 200, 200, .6)) fixed,
-  url(image/C2_sr_1.jpg) no-repeat -100px center;
+  url(image/C2_sr_1.jpg) no-repeat -150px center;
 	  background-size: cover;
 	  font-size: 100%;
   }
