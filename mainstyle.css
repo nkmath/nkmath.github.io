@@ -362,6 +362,18 @@ footer{
     color: #fff;
 }
 
+footer a:link {
+	color: white;
+}
+
+footer a:visited {
+	color: white;
+}
+
+footer a:hover {
+	color: white;
+}
+
 .textleft {
    text-align: left;  /* 文章を左寄せする(※) */
    float: left;     /* 左端に寄せて、後続を右側へ回り込ませる */
