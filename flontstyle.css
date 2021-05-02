@@ -187,6 +187,18 @@ footer{
     color: #fff;
 }
 
+footer a:link {
+	color: white;
+}
+
+footer a:visited {
+	color: white;
+}
+
+footer a:hover {
+	color: white;
+}
+
 
 
 /*---------------レスポンシブ-------------------*/
