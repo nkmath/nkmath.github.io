@@ -148,28 +148,37 @@ p {
 
 
 body{
-        font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
+    font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
 	background-color: white;
 	margin: 0;
 	border-top: 0;
 	border-right: solid 60px #FFFACD;
-	border-left: solid 60px #FFFACD;/* #FFFACD */
+	border-left: solid 60px #FFFACD;
+	/*margin: auto 60px auto 60px;*/
 	border-bottom: 0;
 	min-height: 100vh;
+	margin-top: 40px;
 }
 
 .logo {
 	font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
-	width: 80%;
+	width: 100%;
 	font-size: 170%;
 	line-height: 45px;
-	margin-left: 5px;
+	margin-left: 60px;
 }
 
 
 header {
 	display: flex;
 	border-bottom: 5px solid #808080; /*下部の線の色を指定*/
+	position: fixed;
+	width: 100%;
+	background-color: white;
+	right: 0;
+	left: 0;
+	top: 0;
+	z-index: 1000;
 	/*background-color: #f1f1f1;
 	position: fixed;
 	left:0px ;
@@ -272,9 +281,10 @@ nav{
 	overflow: hidden; /*おまじない*/
 }
 nav ul{
+	margin: 0 60px 0 auto;
 	width: 80%; /*横幅の指定*/
-	margin: 0 0 0 auto;
 	list-style: none; /*リストのスタイルを削除*/
+	
 }
 nav li{
 	width: calc(100% / 4);	/*横幅の指定*/
@@ -339,7 +349,9 @@ table {
 footer{
 	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 	letter-spacing: 1px;
-	/*position: absolute;←絶対位置*/
+	position: relative; 
+	left: 0;
+	right: 0;
     bottom: 0; /*下に固定*/
     font-size: 80%; /*フォントサイズの指定*/
     width: 100%;    /*横幅の指定*/
@@ -381,11 +393,13 @@ footer{
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 5px;
-		background: #fff;
+		/*background: #fff;*/
+		background-color: white;
 	}
 	.logosp {
 		font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 		font-size: 100%;
+		margin-left: 60px;
 	}
 	.drawer-hidden {
 		display: none;
@@ -396,9 +410,10 @@ footer{
 		width: 60px;
 		justify-content: center;
 		align-items: center;
-		position: relative;
+		/*position: relative;*/
 		z-index: 98;/* 重なり順を一番下に */
 		cursor: pointer;
+		margin: 0 60px 0 auto;
 	}
 	.drawer-open span,
 	.drawer-open span:before,
@@ -468,6 +483,7 @@ footer{
 	
 	body {
         font-size: 100%;
+        margin-top: 50px;
     }
     footer {
         font-size: 70%;
@@ -561,6 +577,9 @@ footer{
         border-left: solid 20px #FFFACD;
         font-size: 100%;
     }
+    .logosp {
+		margin-left: 20px;
+	}
     footer {
         font-size: 50%;
     }
@@ -602,6 +621,9 @@ footer{
     footer {
         font-size: 20%;
     }
+    .drawer-open {
+		margin: 0 20px 0 auto;
+	}
 }
 
 
