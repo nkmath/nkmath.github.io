@@ -159,6 +159,7 @@ body{
 }
 
 .logo {
+	font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 	width: 80%;
 	font-size: 170%;
 	line-height: 45px;
@@ -383,6 +384,7 @@ footer{
 		background: #fff;
 	}
 	.logosp {
+		font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 		font-size: 100%;
 	}
 	.drawer-hidden {
