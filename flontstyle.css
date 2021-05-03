@@ -104,7 +104,7 @@ nav li{
 	/*border-left: 1px solid orange;	線を描く*/
 	box-sizing: border-box; /*線の幅をliの横幅に含める*/
 	text-align: center;	/*文字を中央に*/
-	float: left;	/*左から並べる*/
+	/*float: left;	左から並べる*/
 }
 /*nav li:last-child{
 	border-right: 1px solid orange;	/*li要素の最後の物は右側に線を描く
