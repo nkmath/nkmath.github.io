@@ -96,6 +96,7 @@ nav{
 }
 nav ul{
 	width: 10%;	/*横幅の指定*/
+	display: block;
 	margin: 0 auto;	/*中央に配置する*/
 	list-style: none; /*リストのスタイルを削除*/
 }
