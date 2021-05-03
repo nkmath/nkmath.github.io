@@ -112,6 +112,7 @@ nav li{
 nav a{
 	display: block;	/*1つのli全体にリンクを有効にする*/
 	margin: 0 auto;
+	width: 300px;
 	background-color: white;
 	border-radius: 25px;/*角に丸みをつける*/
 	text-decoration: none;	/*ブラウザ標準のリンク装飾をオフに*/
