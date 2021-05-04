@@ -157,7 +157,7 @@ body{
 	/*margin: auto 60px auto 60px;*/
 	border-bottom: 0;
 	min-height: 100vh;
-	margin-top: 40px;
+	margin-top: 50px;
 }
 
 .logo {
@@ -166,6 +166,8 @@ body{
 	font-size: 170%;
 	line-height: 45px;
 	margin-left: 60px;
+	padding-top: 5px;  /*文字上部の余白指定*/
+    padding-bottom: 5px;   /*文字下部の余白指定*/
 }
 
 
@@ -298,6 +300,8 @@ nav li:last-child{
 }
 nav a{
 	display: block;	/*1つのli全体にリンクを有効にする*/
+	padding-top: 5px;  /*文字上部の余白指定*/
+    padding-bottom: 5px;   /*文字下部の余白指定*/
 	text-decoration: none;	/*ブラウザ標準のリンク装飾をオフに*/
 	color:#313131;	/*文字色の変更*/
 	font-size: 110%;	/*フォントサイズの指定*/
@@ -349,7 +353,7 @@ table {
 footer{
 	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 	letter-spacing: 1px;
-	position: relative; 
+	position: fixed; 
 	left: 0;
 	right: 0;
     bottom: 0; /*下に固定*/
