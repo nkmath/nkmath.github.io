@@ -170,6 +170,10 @@ body{
     padding-bottom: 5px;   /*文字下部の余白指定*/
 }
 
+.logo a:hover {
+	transition: 0.3s;
+	opacity: 0.5;
+}
 
 header {
 	display: flex;
