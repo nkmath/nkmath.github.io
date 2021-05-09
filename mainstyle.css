@@ -357,7 +357,7 @@ table {
 footer{
 	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 	letter-spacing: 1px;
-	position: fixed; 
+	/*position: fixed;*/
 	left: 0;
 	right: 0;
     bottom: 0; /*下に固定*/
