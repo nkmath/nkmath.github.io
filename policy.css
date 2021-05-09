@@ -40,7 +40,7 @@ p {
 body{
     font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 	background-color: black;
-	color: white;
+	color: #EEEEEE;
 	margin: 0;
 	border-top: 0;
 	border-right: solid 60px #000;
@@ -136,7 +136,7 @@ footer{
     padding-top: 15px;  /*文字上部の余白指定*/
     padding-bottom: 15px;   /*文字下部の余白指定*/
     background-color: #313131;  /*背景色の指定*/
-    color: #fff;
+    color: #CCCCCC;
 }
 
 footer a:link {
