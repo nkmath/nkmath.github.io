@@ -1,13 +1,13 @@
 a:link {
-  color: black;
+  color: #333333;
 }
 
 a:visited {
-  color: black;
+  color: #333333;
 }
 
 a:hover {
-  color: black;
+  color: #333333;
 }
 
 body{
@@ -92,9 +92,9 @@ header {
   display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: black;
+  color: #333333;
   /*border: solid 2px black;*/
-  background-color: white;
+  background-color: #EEEEEE;
   border-radius: 3px;
   transition: .4s;
   letter-spacing: 1px;
@@ -102,7 +102,7 @@ header {
 
 .btn:hover {
   background-color: orange;
-  color: white;
+  color: #EEEEEE;
 }
 
 .vertical-middle{
