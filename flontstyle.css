@@ -161,7 +161,7 @@ footer{
     padding-top: 15px;  /*文字上部の余白指定*/
     padding-bottom: 15px;   /*文字下部の余白指定*/
     background-color: #313131;  /*背景色の指定*/
-    color: #fff;
+    color: #EEEEEE;
 }
 
 footer a:link {
