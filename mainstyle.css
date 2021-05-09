@@ -11,7 +11,7 @@ a:visited {
 }
 
 a:hover {
-	color:#FF9900;
+	color: #FF9900;
 }
 
 /*a:active {
@@ -470,7 +470,7 @@ footer a:hover {
 	  .drawer-close {
 	  	width: 100%;
 	  	height: 100%;
-	  	background: orange;
+	  	background: #FF9900;
 	  	position: fixed;
 	  	top: 0;
 	  	left: 100%;/* 閉じるための要素を画面外へ */
@@ -494,12 +494,12 @@ footer a:hover {
 		display: list-item;
 		margin-top: 20px;
 		margin-bottom: 10px;
-		border-bottom: 1px solid orange;
+		border-bottom: 1px solid #FF9900;
 	}
 	
 	nav a:hover{
 		background-color: #fff; /*背景色の指定*/
-		color: #000;	/*文字色の変更*/
+		color: #313131; /*文字色の変更*/
 	}
 	
 	body {
