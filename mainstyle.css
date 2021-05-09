@@ -371,6 +371,10 @@ footer{
     color: #CCCCCC;
 }
 
+footer a {
+	text-decoration: none;
+}
+
 footer a:link {
 	color: white;
 }
@@ -381,6 +385,7 @@ footer a:visited {
 
 footer a:hover {
 	color: white;
+	text-decoration: underline;
 }
 
 .textleft {
