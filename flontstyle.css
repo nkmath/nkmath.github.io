@@ -173,13 +173,14 @@ footer ul {
 footer li {
 	display: inline-block;
 	text-align: center;
-	border-right: 1px solid #fff;
-	padding-right: 4.5px;
+	border-right: 1px solid #EEEEEE;
+	padding-right: 10px;
 }
 
 footer li:last-child {
 	border-right: none;
 	padding-right: 0;
+	padding-left: 7px;
 }
 
 footer a {
@@ -187,15 +188,15 @@ footer a {
 }
 
 footer a:link {
-	color: white;
+	color: #EEEEEE;
 }
 
 footer a:visited {
-	color: white;
+	color: #EEEEEE;
 }
 
 footer a:hover {
-	color: white;
+	color: #EEEEEE;
 	text-decoration: underline;
 }
 
