@@ -144,15 +144,15 @@ footer a {
 }
 
 footer a:link {
-	color: white;
+	color: #EEEEEE;
 }
 
 footer a:visited {
-	color: white;
+	color: #EEEEEE;
 }
 
 footer a:hover {
-	color: white;
+	color: #EEEEEE;
 	text-decoration: underline;
 }
 
