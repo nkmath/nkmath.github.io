@@ -407,6 +407,25 @@ footer a:hover {
 	text-decoration: underline;
 }
 
+.secret {
+	color: white;
+}
+
+.secret a:link {
+	color: white;
+}
+
+.secret a:visited {
+	color: white;
+}
+
+.secret a:hover {
+	color: #FF9900;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s; /*ホバー時の動きをなめらかにする*/
+}
+
 .textleft {
    text-align: left;  /* 文章を左寄せする(※) */
    float: left;     /* 左端に寄せて、後続を右側へ回り込ませる */
