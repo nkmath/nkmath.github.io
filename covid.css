@@ -281,21 +281,27 @@ footer a:hover {
 		font-size: 130%;
 		/*margin-left: 20px;*/
 	}
+    h2 {
+        font-size: 110%;
+    }
+    h3 {
+        font-size: 100%;
+    }
     footer {
         font-size: 50%;
     }
     p{
-	font-size: 100%;
+	font-size: 90%;
         /*min-width: 100px;*/
     }
     small {
 	    font-size: 40%;
     }
     ol {
-	    font-size: 100%;
+	    font-size: 90%;
     }
     ul {
-	    font-size: 100%;
+	    font-size: 90%;
     }
     table{
 	font-size: 80%;
