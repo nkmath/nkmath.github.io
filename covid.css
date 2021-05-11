@@ -1,0 +1,318 @@
+/*a {
+font-weight:bold;
+}*/
+
+a:link {
+	color: #66FFFF;
+}
+
+a:visited {
+	color: #66FFFF;/*#FF88FF;*/
+}
+
+a:hover {
+	color: #FFCC66;
+}
+
+/*a:active {
+color:#33CC00;
+}*/
+
+h2 {
+	padding: .10em 0 .5em .5em;
+	border-left: 6px solid #FF9933;
+	border-bottom: 1px solid #FF9933;
+}
+
+h3 {
+	border-bottom: solid 3px skyblue;
+	position: relative;
+	margin-left: 3px;
+}
+
+h3:after {
+	position: absolute;
+	content: " ";
+	display: block;
+	border-bottom: solid 3px #ffc778;
+	bottom: -3px;
+	width: 30%;
+}
+
+td.example{
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+td.ue{
+	vertical-align: top;
+}
+
+p {
+	/*max-width: 800px;
+	min-width: 500px;*/
+	max-width: 80vw;
+	margin-left: 10px;
+}
+
+
+body{
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	background-color: #000055;
+	color: #EEEEEE;
+	margin: 0;
+	border-top: 0;
+	border-right: solid 60px #000055;
+	border-left: solid 60px #000055;
+	/*margin: auto 60px auto 60px;*/
+	border-bottom: 0;
+	min-height: 100vh;
+}
+
+.logo {
+	width: 100%;
+	font-size: 170%;
+	line-height: 45px;
+	/*margin-left: 60px;*/
+	font-weight: bolder;
+}
+
+
+header {
+	font-size: 130%;
+	padding-top: 15px;  /*文字上部の余白指定*/
+    padding-bottom: 15px;   /*文字下部の余白指定*/
+	display: flex;
+	border-bottom: 3px solid #EEEEEE; /*下部の線の色を指定*/
+	/*position: fixed;*/
+	width: 100%;
+	background-color: #000055;
+	right: 0;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	/*background-color: #f1f1f1;
+	position: fixed;
+	left:0px ;
+	right:0px;
+	top: 0;
+	z-index: 10;*/
+}
+
+ul {
+	max-width: 75vw;
+}
+
+ol {
+	max-width: 75vw;
+}
+
+ol li {
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+figure{
+	margin: 0;
+	padding: 0;
+	}
+	
+table {
+	max-width: 80vw;
+}
+
+.table1 {
+  border-collapse: collapse;
+  width: 1000px;
+  border: 3px solid gray;
+  margin: 20px 30px;
+}
+.table1 th, .table1 td {
+  border: 2px solid gray;
+}
+
+
+.inline-block_test {
+    display: inline-block;      /* インラインブロック要素にする */
+    background-color:  #ccc;    /* 背景色指定 */
+    padding: 10px;              /* 余白指定 */
+    width: 200px;
+    margin: 10px
+}
+
+footer{
+	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+	letter-spacing: 1px;
+	/*position: relative; */
+	left: 0;
+	right: 0;
+    bottom: 0; /*下に固定*/
+    /*position: fixed;*/
+    font-size: 80%; /*フォントサイズの指定*/
+    width: 100%;    /*横幅の指定*/
+    text-align: center; /*文字の中央寄せ*/
+    padding-top: 15px;  /*文字上部の余白指定*/
+    padding-bottom: 15px;   /*文字下部の余白指定*/
+    background-color: #000055;  /*背景色の指定*/
+    color: #CCCCCC;
+}
+
+footer ul {
+	display: inline-block;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+footer li {
+	display: inline-block;
+	text-align: center;
+	border-right: 1px solid #EEEEEE;
+	padding-right: 10px;
+}
+
+footer li:last-child {
+	border-right: none;
+	padding-right: 0;
+	padding-left: 7px;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer a:link {
+	color: #EEEEEE;
+}
+
+footer a:visited {
+	color: #EEEEEE;
+}
+
+footer a:hover {
+	color: #EEEEEE;
+	text-decoration: underline;
+}
+
+.textleft {
+   text-align: left;  /* 文章を左寄せする(※) */
+   float: left;     /* 左端に寄せて、後続を右側へ回り込ませる */
+}
+.textright {
+   text-align: right; /* 文章を右寄せする */
+}
+
+/*アコーディング*/
+
+.acd-check{
+  display: none;
+}
+.acd-label{
+  background: #333;
+  color: #fff;
+  display: block;
+  margin-bottom: 1px;
+  padding: 10px;
+}
+.acd-content{
+  border: 1px solid #333;
+  height: 0;
+  opacity: 0;
+  padding: 0 10px;
+  transition: .5s;
+  visibility: hidden;
+}
+.acd-check:checked + .acd-label + .acd-content{
+  height: auto;
+  opacity: 1;
+  padding: 10px;
+  visibility: visible;
+}
+
+
+/*----------------------レスポンシブ---------------------------*/
+
+/*スマホ横画面用*/
+@media screen and (max-width: 760px) {
+    body {
+	font-size: 100%;
+    }
+    .logo {
+		font-size: 130%;
+	}
+    footer {
+        font-size: 20%;
+    }
+    p{
+	font-size: 80%;
+    }
+    small {
+	    font-size: 40%;
+    }
+    ol {
+	    font-size: 80%;
+    }
+    ul {
+	    font-size: 80%;
+    }
+    table{
+	font-size: 80%;
+    }
+    header{
+         font-size: 120%;
+    }
+}
+
+/*スマホ用*/
+@media screen and (max-width: 480px) {
+    *{
+        float: none;
+	position: static;
+    }
+    img {
+	max-width: 100%;
+	height: auto;
+    }
+    body {
+        border-right: solid 20px #000;
+        border-left: solid 20px #000;
+        font-size: 100%;
+    }
+    .logo {
+		font-size: 130%;
+		/*margin-left: 20px;*/
+	}
+    footer {
+        font-size: 50%;
+    }
+    p{
+	font-size: 80%;
+        /*min-width: 100px;*/
+    }
+    small {
+	    font-size: 40%;
+    }
+    ol {
+	    font-size: 80%;
+    }
+    ul {
+	    font-size: 80%;
+    }
+    table{
+	font-size: 80%;
+    }
+    header {
+	    font-size: 110%;
+	}
+    footer {
+        font-size: 20%;
+    }
+}
+
+
+
+
+
+
+
+
+
