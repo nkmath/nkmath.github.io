@@ -243,16 +243,16 @@ footer a:hover {
         font-size: 20%;
     }
     p{
-	font-size: 80%;
+	font-size: 100%;
     }
     small {
 	    font-size: 40%;
     }
     ol {
-	    font-size: 80%;
+	    font-size: 100%;
     }
     ul {
-	    font-size: 80%;
+	    font-size: 100%;
     }
     table{
 	font-size: 80%;
@@ -273,8 +273,8 @@ footer a:hover {
 	height: auto;
     }
     body {
-        border-right: solid 20px #000;
-        border-left: solid 20px #000;
+        border-right: solid 20px #000055;
+        border-left: solid 20px #000055;
         font-size: 100%;
     }
     .logo {
@@ -285,17 +285,17 @@ footer a:hover {
         font-size: 50%;
     }
     p{
-	font-size: 80%;
+	font-size: 100%;
         /*min-width: 100px;*/
     }
     small {
 	    font-size: 40%;
     }
     ol {
-	    font-size: 80%;
+	    font-size: 100%;
     }
     ul {
-	    font-size: 80%;
+	    font-size: 100%;
     }
     table{
 	font-size: 80%;
