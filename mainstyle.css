@@ -423,7 +423,7 @@ footer a:hover {
 	color: #FF9900;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
-	transition: all 0.5s; /*ホバー時の動きをなめらかにする*/
+	transition: all 3.5s; /*ホバー時の動きをなめらかにする*/
 }
 
 .textleft {
